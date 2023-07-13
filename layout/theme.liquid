@@ -201,7 +201,25 @@ fernandoepeso.info
       {%- endif -%}
   {%- endif -%}
   {{ content_for_layout }}
-
+  <footer>
+    <div>© VAATRA BERLIN 2022</div>
+    <div>
+        <a>INSTAGRAM</a><br>
+        <p>NEWSLETTER</p>
+        <form novalidate class="Signup__form" id="newsletter">
+            <input required id="email" autocomplete="off" type="email" placeholder="Enter your email adress">
+            <button form="newsletter" type="submit" class="Signup__button">SUBSCRIBE</button>
+        </form>
+      </div>
+    <div>{% for link in linklists.footer.links %}
+        <li {% if link.active %}class="active "{% endif %}><a href="{{ link.url }}">{{ link.title }}</a></li>
+        {% endfor %}
+    </div>
+    <div> {% for link in linklists.contact.links %}
+        <li {% if link.active %}class="active"{% endif %}><a href="{{ link.url }}">{{ link.title }}</a></li>
+        {% endfor %}
+    </div>
+  </footer>
 <script>
 
 
