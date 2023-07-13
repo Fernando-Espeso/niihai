@@ -1,0 +1,48 @@
+  {%- for block in section.blocks -%}
+    {% case block.type %}
+       {% when 'richtext' %}
+       <div class="text">
+        {{ block.settings.text }}
+      </div>
+    {% endcase %}
+    {% case block.type %}
+        {% when 'logo' %}
+           <div class="home_img">
+            <img alt="{{ block.settings.item.alt}}" src="{{ block.settings.item | img_url: 'master' }}" />
+          </div>
+    {% endcase %}
+  {% endfor %}
+
+{% schema %}
+{
+  "name": "banner",
+  "tag": "div",
+  "class": "banner",
+  "blocks": [
+    {
+      "type": "logo",
+      "name": "item",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "item",
+          "label": "image"
+        }
+      ]
+    },
+    {
+      "type": "richtext",
+      "name": "text",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

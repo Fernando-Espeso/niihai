@@ -1,0 +1,37 @@
+{%- for block in section.blocks -%}
+        {%- assign _block = block.settings -%}
+               {{ block.settings.text | strip_html }}{{ block.settings.texto | strip_html }}
+ {%- endfor -%}
+{% schema %}
+{
+"name": "info block",
+"blocks": [
+  {
+    "type": "Text",
+    "name": "primary text",
+     "limit": 1,
+
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text"
+      }
+    ]
+  },
+     {
+    "type": "richtext",
+    "name": "secondary text",
+     "limit": 1,
+
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "texto",
+        "label": "texto"
+      }
+    ]
+  }
+]
+}
+{% endschema %}

@@ -1,0 +1,16 @@
+<div class="banner_main">
+    {% section 'home_entrance' %}
+</div>
+<div id="main-collection" class="main">
+    {% for product in collections.news.products limit:  4 %}
+         {% include 'product-body' %}
+    {% endfor %}
+</div>
+<div class="section">
+  <div style="color:green">{% section 'offers' %}</div>
+  <form novalidate class="Signup__form" id="newsletter2">
+          <input autocomplete="off" required id="email" type="email" placeholder="Enter your email adress">
+          <button form="newsletter" type="submit" class="Signup__button">SUBSCRIBE</button>
+   </form>
+</div>
+{% section 'banner_home' %}

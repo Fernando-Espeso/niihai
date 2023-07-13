@@ -1,0 +1,71 @@
+
+    {%- for block in section.blocks -%}
+    {% case block.type %}
+       {% when 'double' %}
+           <div class="double">
+       <img alt="{{ block.settings.double.alt}}" src="{{ block.settings.double | img_url: 'master' }}" />
+         </div>
+      {% endcase %}
+
+
+    {% case block.type %}
+        {% when 'single' %}
+           <div class="home_img">
+                  <img alt="{{ block.settings.single.alt}}" src="{{ block.settings.single | img_url: 'master' }}" />
+           </div>
+    {% endcase %}
+
+
+  {% case block.type %}
+      {% when 'video' %}
+      <video class="video-home" muted autoplay playsinline loop>
+          <source src="{{ block.settings.video }}">
+      </video>
+  {% endcase %}
+{% endfor %}
+
+{% schema %}
+{
+  "name": "banner",
+  "tag": "div",
+  "class": "banner",
+  "blocks": [
+    {
+      "type": "double",
+      "name": "double",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "double",
+          "label": "item"
+        }
+      ]
+    },
+    {
+      "type": "single",
+      "name": "single",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "single",
+          "label": "item"
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "name": "video",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "video",
+          "label": "item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

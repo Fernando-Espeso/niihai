@@ -1,0 +1,23 @@
+<div class="oneproduct">
+  <img class="myclass1" alt="{{ section.settings.image.alt}}" src="{{ section.settings.image | img_url: 'master' }}" />
+     {{ section.settings.description }}
+</div>
+{% schema %}
+  {
+      "name": "highlight product",
+     "limit": 1,
+    "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "image"
+
+    },
+{
+        "type": "richtext",
+        "id": "description",
+       "label": "description"
+      }
+]
+}
+{% endschema %}
