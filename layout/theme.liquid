@@ -124,7 +124,9 @@ fernandoepeso.info
       {%- endif -%}
   </div>
   {{ content_for_layout }}
-
+  <footer>
+    <div>© NIIHAI UK LONDON {{ date: "%Y" }}</div>
+  </footer>
   {%- if template contains 'product' -%}
     {{ 'global-product.js' | asset_url | script_tag }}
   {%- endif -%}
@@ -133,9 +135,5 @@ fernandoepeso.info
   {%- endif -%}
   {% render 'mws_apo_init' %}
 </div>
-  <footer>
-    <div>© NIIHAI UK LONDON {{ date: "%Y" }}</div>
-  </footer>
 </body>
-
 </html>

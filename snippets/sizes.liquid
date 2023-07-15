@@ -7,7 +7,7 @@
 {% assign variantCount = product.variants | size %}
 {% if product.available and variantCount > 0 %}
 <div class="product-grid-options-size">
- 
+
 {% for option in product.options %}
 {% assign is_size = false %}
 {% assign downcased_option = option | downcase %}

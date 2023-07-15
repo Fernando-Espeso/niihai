@@ -29,7 +29,9 @@ $('.filt').click(function(){
      $('.filters_shop').addClass("open");
      $('#close').show();
 });
-
+$('.shop').click(function(){
+     $('.categories').toggle();
+});
 $('#close').click(function(){
      $('.filters_shop').removeClass("open");
      $('#close').hide();

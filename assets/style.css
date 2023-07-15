@@ -360,7 +360,7 @@ img{
       text-transform: uppercase;
 }
 .product-price {
-    margin-left: 50%;
+    margin-left: 40px;
 }
 .product-sizes {
   color: white;
@@ -532,6 +532,7 @@ span#close {
 }
 .product-variant-title,
 .product-variant-item .option-value{
+    padding: 5px;
 }
 .product-variant-item .option-value,
 .product-variant-option .color-option {
@@ -544,7 +545,7 @@ span#close {
   opacity: 1;
   background-color: black!important;
   height: 50px;
-  padding: 5px;  
+  padding: 5px;
 }
 .product-variant-option[open]:not(.unavailable) .option-value{
   height: 50px;
@@ -579,6 +580,24 @@ span#close {
   padding-bottom: 2px;
   text-align: center;
 }
+.size-guide{
+  background-color:blue;
+  color: white;
+  padding: 5px;
+  padding-bottom: 2px;
+  text-align: center;
+}
+.main-information{
+  display: flex;
+}
+.menu-title{
+  width: 200px;
+  padding: 5px;
+  padding-bottom: 2px;
+}
+.menu-title > span{
+  float: right;
+}
 
 /* FOOTER
 ================================================== */
@@ -597,6 +616,7 @@ footer{
   transform: translate(-50%, 0);
   position: fixed;
   width: 500px;
+  padding-bottom: 10px;
 }
 #bag{
   background-color: white;
