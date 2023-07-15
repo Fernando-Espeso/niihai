@@ -3,7 +3,7 @@
  */
 
 //Shuffle
-(function($){ 
+(function($){
   $.fn.shuffle = function(){
     var allElems = this.get(),
         getRandom = function(max){
@@ -19,8 +19,8 @@
       $(this).replaceWith($(shuffled[i]));
     });
     return $(shuffled);
-  }; 
+  };
 })(jQuery);
 //Related
-$('#related .product:nth-child(4)').nextAll().remove();  
+$('#related .product:nth-child(3)').nextAll().remove();  
 $('#related .product').shuffle();

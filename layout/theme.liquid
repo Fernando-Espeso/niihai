@@ -55,7 +55,6 @@ fernandoepeso.info
   {%- endif -%}
   {{ content_for_header }}
 </head>
-
 <body class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}
              {%- if template.suffix.size > 0 -%}
              template-{{ template.suffix }}(&nbsp;
@@ -108,11 +107,10 @@ fernandoepeso.info
   	    </div>
   </header>
   <div class="categories">
-      <!-- {% for link in linklists.main-menu.links %}
-      <li {% if link.active %}class="active"{% endif %}><a class="{{ link.title }}" href="{{ link.url }}">{{ link.title }}</a></li>
-      {% endfor %} -->
       {% assign current_collection_handle = collection.handle | default: '' %}
+      {% assign product_count = collections.all.products_count %}
 
+      <li {% if request.path == '/collections/all' %}class="active"{% endif %}><a href="/collections/all">SHOP ALL</a><span> {{ product_count }}</span></li>
       {% for collection in collections %}
         <li {% if collection.handle == current_collection_handle %} class="active" {% endif %}>
           <a href="{{ collection.url }}">{{ collection.title }} <span>{{ collection.all_products_count }}</span></a>
@@ -123,10 +121,12 @@ fernandoepeso.info
           <li><a class="sort" data-sort="price">Low to high</a></li>
       {%- endif -%}
   </div>
+  <div class="brand-links">
+    {% for link in linklists.main-menu.links %}
+    <li {% if link.active %}class="active"{% endif %}><a class="{{ link.title }}" href="{{ link.url }}">{{ link.title }}</a></li>
+    {% endfor %}
+  </div>
   {{ content_for_layout }}
-  <footer>
-    <div>© NIIHAI UK LONDON {{ date: "%Y" }}</div>
-  </footer>
   {%- if template contains 'product' -%}
     {{ 'global-product.js' | asset_url | script_tag }}
   {%- endif -%}
@@ -135,5 +135,8 @@ fernandoepeso.info
   {%- endif -%}
   {% render 'mws_apo_init' %}
 </div>
+<footer>
+  <div>© NIIHAI UK LONDON {{ date: "%Y" }}</div>
+</footer>
 </body>
 </html>

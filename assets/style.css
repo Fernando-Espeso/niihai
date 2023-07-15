@@ -2,16 +2,6 @@
 /*
  * Global Styles
  */
- :root {
-   --main: 12px;
-   --gap: 10px;
-   --yellow:yellow;
-   --light:#f2f2f2;
-   --darker:#dfdfdf;
-   --sold:#acadae;
-   --font:'ButlerStencil-Bold';
- }
-
  #preview-bar-iframe,
  .collection-digital-goods-vat-tax,
  .collection-monarch-regular,
@@ -22,13 +12,53 @@
 }
 .product-variant-item input[type='radio']:disabled + label,
 .product-variant-item input[type='radio'].unavailable + label {
-  border-color: rgba(var(--color-foreground), 0.3);
-  color: rgba(var(--color-foreground), 0.4);
-  text-decoration: line-through;
+  background-color: var(--darker);
 }
 .product-variant-item input[type='radio'].unavailable:checked + label {
-  color: rgb(var(--color-background));
+  background-color: var(--darker);
 }
+.unavailable{
+}
+.product.sold .product-sizes {
+  display: none;
+}
+.product.sale .product-sizes {
+  display: none;
+}
+::selection{
+  background-color:transparent;
+  color:grey;
+}
+.tg .tags:not(:last-child):after {
+content:","!important;
+}
+.bottom{
+  padding:20px;
+    grid-column:1/ span 12;
+}
+.center{
+  grid-column:4 / span 6
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+ :root {
+   --main: 12px;
+   --gap: 10px;
+   --yellow:yellow;
+   --light:#f2f2f2;
+   --darker:#dfdfdf;
+   --sold:#acadae;
+   --font:'ButlerStencil-Bold';
+ }
+
+
 ::selection{
   background-color:transparent;
   color:grey;
@@ -206,7 +236,7 @@ header {
   padding-bottom: 2px;
 }
 .search{
-  width: 300px;
+  width: 200px;
   background-color: var(--darker);
 }
 .brand {
@@ -241,6 +271,33 @@ header {
   color: black;
 }
 .categories > li:hover{
+  background-color: var(--darker);
+}
+
+.brand-links{
+  z-index: 10;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 29px;
+  width: 200px;
+  text-transform: uppercase;
+}
+.brand-links > li{
+  background-color: var(--light);
+  padding: 5px;
+  padding-bottom: 2px;
+}
+
+.brand-links > li span{
+  float: right;
+}
+
+.brand-links > li.active{
+  background-color: var(--darker);
+  color: black;
+}
+.brand-links > li:hover{
   background-color: var(--darker);
 }
 
@@ -289,17 +346,11 @@ img{
   grid-column:span 4;
 }
 .thumbnail{
- height:80vh;
- overflow:hidden;
   position:relative;
-}
-.thumbnail:hover #none{
- display: none;
 }
 
 .thumbnail img{
-  height: 100%;
-  object-fit: cover;
+  width: 100%;
 }
 .row {
   padding: 5px;
@@ -307,11 +358,12 @@ img{
   background-color: var(--light);
 }
 .product.sold .row {
-
+  position: relative;
   background-color: black;
   color:var(--sold);
 }
 .product.sale .row {
+  position: relative;
   background-color: yellow;
   color:black;
 }
@@ -319,13 +371,20 @@ img{
   opacity: 0.3;
 }
 .sold-out{
-    color:#9B9B9B;
-    padding:2px;
-    position: absolute;
-    top: 50%;
-    transform: translate(0%,-50%);
-    left: 0px;
-    background-color: white;
+  text-align: right;
+  float: right;
+  position: absolute;
+  right: 5px;
+  color: #9b9b9b;
+  left: 0px;
+}
+.onsale{
+  text-align: right;
+  float: right;
+  position: absolute;
+  right: 5px;
+  color: black;
+  left: 0px;
 }
 .colors {
     position: absolute;
@@ -369,20 +428,15 @@ img{
   left: 0px;
   padding: 5px;
   padding-bottom: 2px;
-  width: 80px;
-  justify-content: space-around;
+  width: auto;
   position: absolute;
   display: flex;
   gap: 5px;
   align-items: center;
 }
-.product:hover .product-sizes{
-  display: flex;
-  gap: 5px;
-}
-.product:hover .product-price{
-  display: none;
-}
+
+
+
 .filters_shop {
     display:none;
     text-transform: uppercase;
@@ -496,7 +550,7 @@ span#close {
 }
 .product_gallery{
       grid-template-columns: repeat(1, 1fr);
-  grid-column:span 6;
+  grid-column:4/span 6;
 }
 .product_information{
   display:grid;
@@ -509,9 +563,6 @@ span#close {
 }
 .unavailable{
   color:grey
-}
-.product-simple{
-  display: none;
 }
 .product-sizes.hide {
     display: none;
@@ -551,6 +602,7 @@ span#close {
   height: 50px;
   text-align: left;
   padding: 5px;
+  background-color: var(--darker)!important;
 }
 .product-variant-option[open]:not(.unavailable) .color-option{
   border: 1px solid grey;
@@ -602,10 +654,9 @@ span#close {
 /* FOOTER
 ================================================== */
 footer{
-  margin-left: 10px;
+  padding: 5px;
   margin-top: auto;
-  margin-bottom: 10px;
-  padding-top: 50px;
+  padding-top: 200px;
 }
 /* PRODUCT BODY
 ================================================== */
