@@ -18,122 +18,119 @@
      {% if product.compare_at_price > product.price %}sale{% else %}{% endif %}
           {% for filter in sizes %}{% unless filter == blank %}filter-size-{{ filter | strip | handle | downcase | escape }} {% endunless %}{% endfor %}
            {% for filter in colors %}{% unless filter == blank %}filter-color-{{ filter | strip | handle | downcase | escape }} {% endunless %}{% endfor %}"
-data-price="{{ product.price }}"
-data-pos="{{ forloop.index }}"
+      data-price="{{ product.price }}"
+      data-pos="{{ forloop.index }}"
   >
-  <!--Product Link-->
-  <a class="thumbnail" href="{{ product.url }}">
-    <span class="box"></span>
-      {% unless product.metafields.custom.notice == blank %}
-          <div class="newin" style="z-index:100; text-transform:uppercase;">  {{ product.metafields.custom.notice }}</div>
-      {% endunless %}
-        <span class="colors" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
-          {%- for option in product.options_with_values -%}
-            {%- for value in option.values -%}
-              {%- liquid
-                assign optionNumber = 'option' | append: option.position
-                assign optionVariant = false
-                for variant in product.variants
-                  if variant[optionNumber] == value
-                    assign optionVariant = variant
-                    break
-                  endif
-                endfor
-              -%}
-            {%- endfor -%}
-          {%- endfor -%}
-          <script type="application/json">
-            {{ product.variants | json }}
-          </script>
-         </span>
-
-    <form id="product-actions" action="/cart/add" method="post" enctype="multipart/form-data"
-                      {%- if product.has_only_default_variant -%}
-                      class="product-simple"
-                      {%- elsif variants > 1 -%}
-                      class="product-variants"
-                      {%- endif -%}>
+        <a class="thumbnail" href="{{ product.url }}">
+            <span class="box"></span>
+              {% unless product.metafields.custom.notice == blank %}
+                  <div class="newin" style="z-index:100; text-transform:uppercase;">  {{ product.metafields.custom.notice }}</div>
+              {% endunless %}
+                <span class="colors" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+                  {%- for option in product.options_with_values -%}
+                    {%- for value in option.values -%}
+                      {%- liquid
+                        assign optionNumber = 'option' | append: option.position
+                        assign optionVariant = false
+                        for variant in product.variants
+                          if variant[optionNumber] == value
+                            assign optionVariant = variant
+                            break
+                          endif
+                        endfor
+                      -%}
+                    {%- endfor -%}
+                  {%- endfor -%}
+                  <script type="application/json">
+                    {{ product.variants | json }}
+                  </script>
+                 </span>
+            <form id="product-actions" action="/cart/add" method="post" enctype="multipart/form-data"
+                              {%- if product.has_only_default_variant -%}
+                              class="product-simple"
+                              {%- elsif variants > 1 -%}
+                              class="product-variants"
+                              {%- endif -%}>
 
 
 
-                                     {% if product.compare_at_price > product.price %}
-                                        <div class="sale">ON SALE</div>
+                                             {% if product.compare_at_price > product.price %}
+                                                <div class="sale">ON SALE</div>
+                                             {% else %}
+                                             {% endif %}
+                                     {% if product.available %}
                                      {% else %}
+                                         <div class="sold-out">SOLD OUT</div>
                                      {% endif %}
-                             {% if product.available %}
-                             {% else %}
-                                 <div class="sold-out">SOLD OUT</div>
-                             {% endif %}
 
 
 
-        </form>
-
-    {% for media in product.media %}
-        {% case media.media_type %}
-              {% when 'video' %}
-                <div  class="product-video">
-                      {{ media | video_tag:loop: true, autoplay: true, muted:true}}
-                </div>
-        {% endcase %}
-    {% endfor %}
-    <img id="none" class="lazy" src="{{ product.images[0] | product_img_url: 'thumb' }}" data-src="{{ product.images[0] | product_img_url: 'master' }}" alt="{{ product.title }}" />
-    <img class="lazy" src="{{ product.images[1] | product_img_url: 'thumb' }}" data-src="{{ product.images[1] | product_img_url: 'master' }}" alt="{{ product.title }}" /></a>
-   	<div class="product-price-wrap">
-        {% if product.available %}
-              {% if product.price_varies %}
+                </form>
+            {% for media in product.media %}
+                {% case media.media_type %}
+                      {% when 'video' %}
+                        <div  class="product-video">
+                              {{ media | video_tag:loop: true, autoplay: true, muted:true}}
+                        </div>
+                {% endcase %}
+            {% endfor %}
+            <img id="none" class="lazy" src="{{ product.images[0] | product_img_url: 'thumb' }}" data-src="{{ product.images[0] | product_img_url: 'master' }}" alt="{{ product.title }}" />
+            <img class="lazy" src="{{ product.images[1] | product_img_url: 'thumb' }}" data-src="{{ product.images[1] | product_img_url: 'master' }}" alt="{{ product.title }}" /></a>
+           	<div class="product-price-wrap">
+                {% if product.available %}
+                      {% if product.price_varies %}
+                        {% else %}
+                         {% if product.compare_at_price > product.price %}
+                          {% else %}
+                          {% endif %}
+                        {% endif %}
+                    {% else %}
+                {% endif %}
+            </div>
+        <div class="row">
+          <!--Product Title-->
+            <div class="main-information">
+              <div class="product-title"><a href="{{ product.url }}">{{ product.title}}</a></div>
+              <div class="product-price">
+               {% if product.available %}
+                {% if product.price_varies %}
+                  <span>{{ product.price_min | money }}</span> – <span>{{ product.price_max | money }}</span>
                 {% else %}
-                 {% if product.compare_at_price > product.price %}
+                  {% if product.compare_at_price > product.price %}
+                  <s>{{ product.compare_at_price | money }}</s>
+                <span class="red">{{ product.price | money }}</span>
                   {% else %}
+                <span>{{ product.price | money }}</span>
+
                   {% endif %}
                 {% endif %}
-            {% else %}
-        {% endif %}
-    </div>
-  <div class="row">
-  <!--Product Title-->
-    <div class="main-information">
-      <div class="product-title"><a href="{{ product.url }}">{{ product.title}}</a></div>
-      <div class="product-price">
-       {% if product.available %}
-        {% if product.price_varies %}
-          <span>{{ product.price_min | money }}</span> – <span>{{ product.price_max | money }}</span>
-        {% else %}
-          {% if product.compare_at_price > product.price %}
-          <s>{{ product.compare_at_price | money }}</s>
-        <span class="red">{{ product.price | money }}</span>
-          {% else %}
-        <span>{{ product.price | money }}</span>
+              {% else %}
+              <span>{{ product.price | money }}</span>
+              {% endif %}
 
-          {% endif %}
-        {% endif %}
-      {% else %}
-      <span>{{ product.price | money }}</span>
-      {% endif %}
+              </div>
+              <div class="product-sizes {% if product.has_only_default_variant %}  hide  {% endif %}">
+                {% for option in product.options_with_values %}
+                  {%- for value in option.values -%}
+                    {% unless option.name == "Color" %}
+                      {%- liquid
+                        assign optionNumber = 'option' | append: option.position
+                        assign optionVariant = false
+                        for variant in product.variants
+                          if variant[optionNumber] == value
+                            assign optionVariant = variant
+                            break
+                          endif
+                        endfor
+                      -%}
+                      <div class="product-size-value {% if optionVariant.available == false %} unavailable {% endif %}"> {{ value }} </div>
+                    {% endunless %}
+                  {% endfor %}
+                {% endfor %}
+              </div>
+          </div>
 
-      </div>
-      <div class="product-sizes {% if product.has_only_default_variant %}  hide  {% endif %}">
-        {% for option in product.options_with_values %}
-          {%- for value in option.values -%}
-            {% unless option.name == "Color" %}
-              {%- liquid
-                assign optionNumber = 'option' | append: option.position
-                assign optionVariant = false
-                for variant in product.variants
-                  if variant[optionNumber] == value
-                    assign optionVariant = variant
-                    break
-                  endif
-                endfor
-              -%}
-              <div class="product-size-value {% if optionVariant.available == false %} unavailable {% endif %}"> {{ value }} </div>
-            {% endunless %}
-          {% endfor %}
-        {% endfor %}
-      </div>
-  </div>
-
-    </div>
+        </div>
 </div>
   {%- if template contains 'product' or template contains 'collection' -%}
   {{ 'global-product.js' | asset_url | script_tag }}

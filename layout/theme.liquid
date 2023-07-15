@@ -108,8 +108,15 @@ fernandoepeso.info
   	    </div>
   </header>
   <div class="categories">
-      {% for link in linklists.main-menu.links %}
+      <!-- {% for link in linklists.main-menu.links %}
       <li {% if link.active %}class="active"{% endif %}><a class="{{ link.title }}" href="{{ link.url }}">{{ link.title }}</a></li>
+      {% endfor %} -->
+      {% assign current_collection_handle = collection.handle | default: '' %}
+
+      {% for collection in collections %}
+        <li {% if collection.handle == current_collection_handle %} class="active" {% endif %}>
+          <a href="{{ collection.url }}">{{ collection.title }} <span>{{ collection.all_products_count }}</span></a>
+        </li>
       {% endfor %}
       {% if template == 'collection'%}
           <li><a class="sort invert" data-sort="price">Hight to Low</a></li>

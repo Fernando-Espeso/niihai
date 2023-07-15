@@ -2,10 +2,8 @@
 <product-variants class="" data-url="{{ product.url | within: collection }}" {{ block.shopify_attributes }}>
   {%- for option in product.options_with_values -%}
     <div class="product-variant-item">
-      <div class="product-variant-title">
-        <label class="" for="Option-{{ forloop.index0 }}">
-          {{ option.name }}
-        </label>
+      <div class="info-size">
+          SELECT YOUR SIZE
       </div>
 
       <fieldset class="" data-type="radio">
