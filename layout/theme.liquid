@@ -1,115 +1,108 @@
 <!DOCTYPE html>
 <!--
-
 {% echo shop.name %}
 Design by Fernando Espeso
 Code by Fernando Espeso
-
 fernandoepeso.info
 {{ 'now' | date: "%Y" }}
-
 -->
 <html lang="{{ shop.locale }}" style="padding-bottom:0px;">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
   {%- if template.name != "index" and template.name != "cart" -%}
-  	<title>{{ shop.name }} — {{ page_title }}</title>
+    <title>{{ shop.name }} — {{ page_title }}</title>
   {%- elsif template.name == "cart" -%}
-  	<title>{{ shop.name }} — {% if cart.item_count == 0 %}Empty {% endif %}Cart</title>
+    <title>{{ shop.name }} — {% if cart.item_count == 0 %}Empty {% endif %}Cart</title>
   {%- else -%}
-  	<title>{{ shop.name }}</title>
+    <title>{{ shop.name }}</title>
   {%- endif -%}
   <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <link rel="canonical" href="{{ canonical_url }}" />
   {%- if settings.favicon.size > 0 -%}
-<link rel="shortcut icon" href="{{ 'favicon.png' | asset_url }}">  {%- endif -%}
+    <link rel="shortcut icon" href="{{ 'favicon.png' | asset_url }}">
+  {%- endif -%}
   {%- if page_description -%}
     <meta name="description" content="{{ page_description | escape }}" />
   {%- else -%}
-  	<meta name="description" content="{{ shop.description }}" />
+    <meta name="description" content="{{ shop.description }}" />
   {%- endif -%}
   {%- if template contains '404' or template contains 'cart' or template contains 'search' -%}
-	<meta name="robots" content="noindex">
+    <meta name="robots" content="noindex">
   {%- endif -%}
   {{ 'style.css'  | asset_url | stylesheet_tag }}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   {{ 'current-device-browser.min.js' | asset_url | script_tag }}
   {%- if template == 'product' -%}
-  {{ 'option_selection.js' | shopify_asset_url | script_tag }}
+    {{ 'option_selection.js' | shopify_asset_url | script_tag }}
   {%- endif -%}
   {{ 'global.js' | asset_url | script_tag }}
   {%- if template == "cart" and cart.item_count > 0 -%}
-  {{ 'global-cart.js' | asset_url | script_tag }}
+    {{ 'global-cart.js' | asset_url | script_tag }}
   {%- endif -%}
   {%- if template == 'product' -%}
-  {{ '//cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js' | script_tag }}
-  <link rel="preload" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
-
-
+    {{ '//cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js' | script_tag }}
+    <link rel="preload" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
   {%- endif -%}
   {{ content_for_header }}
 </head>
 <body class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}
              {%- if template.suffix.size > 0 -%}
              template-{{ template.suffix }}(&nbsp;
-
              {% endif %}
              {%- if template == 'cart' and cart.item_count == 0 -%}
              template-cart-empty
              {%- endif -%}">
-<div class="m">
-  <div id="loader"
-       style="position: fixed;
-              top: 0;
-              left: 0;
-              width: 100vw;
-              height: 100%;
-              background-color: white;
-              z-index: 99999999;">
-	<script type="text/javascript">
-      setTimeout(function(){
-		$("#loader").delay(10).fadeOut(function(){
-          $(this).remove();
-		});
-      }, 500);
-    </script>
-  </div>
-  <!--Header-->
-  <header id="header">
-    <div class="menu-open">MENU</div>
-    	<div class="menu">
+  <div class="m">
+    <div id="loader"
+         style="position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100%;
+                background-color: white;
+                z-index: 99999999;">
+      <script type="text/javascript">
+        setTimeout(function(){
+          $("#loader").delay(10).fadeOut(function(){
+            $(this).remove();
+          });
+        }, 500);
+      </script>
+    </div>
+    <!-- Header -->
+    <header id="header">
+      <div class="menu-open">MENU</div>
+      <div class="menu">
         <div class="shop">SHOP</div>
         <div class="search">SEARCH PRODUCT</div>
         <div class="brand">NIIHAI</div>
-    	</div>
-       <div class="cart-part">
-            {% for link in linklists.top-bar.links %}
-              <li class="nain" {% if link.active %}class="active"{% endif %}><a href="{{ link.url }}">{{ link.title }}</a></li>
-            {% endfor %}
-
-            <li>
-              <a id="cart" {% if template == 'cart' %}  style="color:green;"{% endif %} href="/cart">
-                BAG (&nbsp;<span class="cart-total">
-                    {%- if cart.item_count == 0 -%}
-                    0
-                    {%- else -%}
-                    {{- cart.item_count -}}
-                    {%- endif -%}
-                </span>&nbsp;)
-              </a>
-          </li>
-  	    </div>
-  </header>
-  <div class="categories">
+      </div>
+      <div class="cart-part">
+        {% for link in linklists.top-bar.links %}
+          <li class="nain" {% if link.active %}class="active"{% endif %}><a href="{{ link.url }}">{{ link.title }}</a></li>
+        {% endfor %}
+        <li>
+          <a id="cart" {% if template == 'cart' %}  style="color:green;"{% endif %} href="/cart">
+            BAG (&nbsp;<span class="cart-total">
+              {%- if cart.item_count == 0 -%}
+                0
+              {%- else -%}
+                {{- cart.item_count -}}
+              {%- endif -%}
+            </span>&nbsp;)
+          </a>
+        </li>
+      </div>
+    </header>
+    <div class="categories">
       {% assign current_collection_handle = collection.handle | default: '' %}
       {% assign product_count = collections.all.products_count %}
-
       <li {% if request.path == '/collections/all' %}class="active"{% endif %}><a href="/collections/all">SHOP ALL</a><span> {{ product_count }}</span></li>
       {% for collection in collections %}
         <li {% if collection.handle == current_collection_handle %} class="active" {% endif %}>
@@ -117,26 +110,26 @@ fernandoepeso.info
         </li>
       {% endfor %}
       {% if template == 'collection'%}
-          <li><a class="sort invert" data-sort="price">Hight to Low</a></li>
-          <li><a class="sort" data-sort="price">Low to high</a></li>
+        <li><a class="sort invert" data-sort="price">Hight to Low</a></li>
+        <li><a class="sort" data-sort="price">Low to high</a></li>
       {%- endif -%}
+    </div>
+    <div class="brand-links">
+      {% for link in linklists.main-menu.links %}
+        <li {% if link.active %}class="active"{% endif %}><a class="{{ link.title }}" href="{{ link.url }}">{{ link.title }}</a></li>
+      {% endfor %}
+    </div>
+    {{ content_for_layout }}
+    {%- if template contains 'product' -%}
+      {{ 'global-product.js' | asset_url | script_tag }}
+    {%- endif -%}
+    {%- if template == 'product' -%}
+      {% render 'ajaxify-cart' %}
+    {%- endif -%}
+    {% render 'mws_apo_init' %}
   </div>
-  <div class="brand-links">
-    {% for link in linklists.main-menu.links %}
-    <li {% if link.active %}class="active"{% endif %}><a class="{{ link.title }}" href="{{ link.url }}">{{ link.title }}</a></li>
-    {% endfor %}
-  </div>
-  {{ content_for_layout }}
-  {%- if template contains 'product' -%}
-    {{ 'global-product.js' | asset_url | script_tag }}
-  {%- endif -%}
-  {%- if template == 'product' -%}
-	   {% render 'ajaxify-cart' %}
-  {%- endif -%}
-  {% render 'mws_apo_init' %}
-</div>
-<footer>
-  <div>© NIIHAI UK LONDON {{ date: "%Y" }}</div>
-</footer>
+  <footer>
+    <div>© NIIHAI UK LONDON {{ 'now' | date: "%Y" }}</div>
+  </footer>
 </body>
 </html>
