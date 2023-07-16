@@ -25,12 +25,11 @@ $('.menu_open').click(function(){
      $('.menu').toggleClass("open");
      $('.nain').toggleClass("open");
 });
-$('.filt').click(function(){
-     $('.filters_shop').addClass("open");
-     $('#close').show();
-});
 $('.shop').click(function(){
      $('.categories').toggle();
+});
+$('.brand').click(function(){
+     $('.brand-links').toggle();
 });
 $('#close').click(function(){
      $('.filters_shop').removeClass("open");
