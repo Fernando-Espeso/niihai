@@ -176,12 +176,19 @@
             "settings": {
               "title": "<p>WE DO NOT PROVIDE RETURNS LABELS, A RETURN IS COVERED BY THE CUSTOMER AND ONLY REFUNDED FOR THE ITEM ONCE RETURNED TO US.<\/p>"
             }
+          },
+          "f8742f16-468c-49d5-a3d9-fe04bf41c133": {
+            "type": "text",
+            "settings": {
+              "title": "<p>PROOF OF POSTAGE FOR RETURNS MUST BE PROVIDED IN ORDER FOR A RETURN TO BE SUCCESSFULLY PROCESSED. THE ITEM (BEING RETURNED) IS THE CUSTOMERS RESPONSIBILITY UNTIL IT IS RECEIVED BACK WITH US. THEREFORE WE ADVISE TO RETURN USING A TRACKED SERVICE.<\/p>"
+            }
           }
         },
         "block_order": [
           "070b5a1b-b07e-4380-95b0-e2e8c5f54075",
           "6725593a-00fa-486d-b378-8c89e58d52b7",
-          "a7ad4ef8-11e2-4846-a1c0-6cd9c1daf321"
+          "a7ad4ef8-11e2-4846-a1c0-6cd9c1daf321",
+          "f8742f16-468c-49d5-a3d9-fe04bf41c133"
         ],
         "settings": {
         }
