@@ -4,6 +4,32 @@
     "sections": {
       "faq": {
         "type": "faq",
+        "blocks": {
+          "5df7488a-fe80-4142-934a-37dbdd566954": {
+            "type": "text",
+            "settings": {
+              "title": "<p>SHIIPING<\/p>"
+            }
+          },
+          "bf29dcd4-464f-48b4-ba10-3b0d0bf90b84": {
+            "type": "text",
+            "settings": {
+              "title": ""
+            }
+          },
+          "e03132f6-ac45-4ec3-afcb-fe5a2169d814": {
+            "type": "summary",
+            "settings": {
+              "subtitle": "<p>THE ITEM I WANT TO BUY IS OUT OF STOCK, WHEN WILL IT BE RE STOCKED? <\/p>",
+              "interior": ""
+            }
+          }
+        },
+        "block_order": [
+          "5df7488a-fe80-4142-934a-37dbdd566954",
+          "bf29dcd4-464f-48b4-ba10-3b0d0bf90b84",
+          "e03132f6-ac45-4ec3-afcb-fe5a2169d814"
+        ],
         "settings": {
         }
       },
@@ -13,10 +39,7 @@
           "2df170fb-dc8d-4ce0-ba0a-0a3dbefafcfb": {
             "type": "media",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Screenshot_2023-07-16_at_02.14.40.png",
-              "heading": "",
-              "button_label": "",
-              "button_link": ""
+              "image": "shopify:\/\/shop_images\/Screenshot_2023-07-16_at_02.14.40.png"
             }
           }
         },
