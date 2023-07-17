@@ -398,6 +398,35 @@ div#shopify-section-hero img{
   top: 5px;
   z-index: 101;
 }
+/* DEAFULT PAGE */
+details summary::-webkit-details-marker {
+  display:none!important;
+}
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.desplegable{
+  width: 500px;
+  margin: 0 auto;
+}
+
+.desplegable summary{
+  background-color: var(--light);
+  padding: 5px;
+  padding-bottom: 2px;
+}
+.desplegable summary:hover{
+  background-color: var(--darker);
+}
+
+.desplegable .interior{
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
 
 /* Shop styles */
 .main {
@@ -751,7 +780,7 @@ span#close {
 }
 
 .variations #add-to-bag:hover {
-  background: yellow;  
+  background: yellow;
 }
 
 .info-size {
