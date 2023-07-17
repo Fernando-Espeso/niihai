@@ -45,6 +45,13 @@
               "subtitle": "<p>WHEN WILL I RECEIVE MY ORDER?<\/p>",
               "interior": "<p>WE AIM TO DISPATCH MOST ORDERS WITHIN 72 WORKING HOURS AFTER RECEIVING, MONDAY TO FRIDAY. (EXCLUDING PUBLIC HOLIDAYS.)<\/p><p>ONCE YOUR ORDER HAS BEEN DISPATCHED YOU WILL RECEIVE AN EMAIL NOTIFYING YOU THAT YOUR ORDER HAS BEEN SHIPPED. THIS EMAIL WILL CONTAIN YOUR TRACKING NUMBER. PLEASE USE THIS TO FOLLOW YOUR ORDERS PROGRESS.<\/p><p>SEE AVERAGE DELIVERY TIMES FOR UK\/INTERNATIONAL ORDERS BELOW.<br\/>PLEASE NOTE DISPATCH, SHIPPING AND DELIVERY TIMES ARE NOT GUARANTEED THEY ARE MERELY AN AIM.<\/p><ol><li>UK<br\/>AVERAGE DELIVERY TIMES WITHIN THE UK ARE AROUND 1 WEEK.<\/li><li>INTERNATIONAL<br\/>AVERAGE DELIVERY TIMES FOR INTERNATIONAL ORDERS ARE AROUND 2-3 WEEKS.<\/li><\/ol>"
             }
+          },
+          "a3dcd576-b0d8-4025-bc5b-792deed8d3d8": {
+            "type": "summary",
+            "settings": {
+              "subtitle": "<p>I HAVE RECEIVED THE INCORRECT ORDER. IE ITEM\/SIZE\/COLOUR. WHAT SHOULD I DO?<\/p>",
+              "interior": ""
+            }
           }
         },
         "block_order": [
@@ -53,7 +60,8 @@
           "32f6e1e2-c175-4c94-896b-45e15a67f010",
           "9d6ced68-3d74-4737-97b4-e2c9e6876d50",
           "485a5b69-69d9-4c97-804f-faace3a041a5",
-          "cace6c80-e970-45a2-a46c-040b81337f12"
+          "cace6c80-e970-45a2-a46c-040b81337f12",
+          "a3dcd576-b0d8-4025-bc5b-792deed8d3d8"
         ],
         "settings": {
         }
