@@ -55,15 +55,40 @@
       "contact": {
         "type": "contact",
         "blocks": {
-          "59f2a4ce-8fdb-4df8-ada0-2259859ab097": {
-            "type": "text",
+          "02b4e8d3-2b15-4d0c-aec7-46c54e703462": {
+            "type": "summary",
             "settings": {
-              "title": "<p>IF YOU NEED ANY HELP PLEASE EMAIL<a href=\"mailto:HELP@NIIHAI.CO.UK\">HELP@NIIHAI.CO.UK<\/a> <\/p><p> <\/p><p>CLEARLY STATE IN SUBJECT LINE REASON FOR CONACT<\/p><p> <\/p><p>OUR CUSTOMER SERVICE TEAM WORKS MONDAY TO FRIDAY, PLEASE ALLOW 1-2 WORKING DAYS FOR A RESPONSE.<\/p><p> <\/p><p>FOR ANY WHOLESALE\/STOCKIST ENQUIRIES, STYLISTS OR BRAND COLLABORATIONS, CONTACT: ROSALINDIS@NIIHAI.CO.UK<\/p><p> <\/p><p>WE DO NOT REPLY TO CUSTOMER SERVICE QUERIES VIA DM<\/p><p> <\/p>"
+              "subtitle": "<p>HELP<\/p>",
+              "interior": "<p>IF YOU NEED ANY HELP PLEASE EMAIL<a href=\"mailto:HELP@NIIHAI.CO.UK\">HELP@NIIHAI.CO.UK<\/a> <\/p><p><\/p>"
+            }
+          },
+          "29b955b5-687a-4c66-9ed2-88f7f7e0c735": {
+            "type": "summary",
+            "settings": {
+              "subtitle": "<p>COSTUMER SERVICE<\/p>",
+              "interior": "<p>OUR CUSTOMER SERVICE TEAM WORKS MONDAY TO FRIDAY, PLEASE ALLOW 1-2 WORKING DAYS FOR A RESPONSE.<\/p>"
+            }
+          },
+          "e04ba665-87b0-45fa-b629-4422e1524012": {
+            "type": "summary",
+            "settings": {
+              "subtitle": "<p>ENQUIERES<\/p>",
+              "interior": "<p>FOR ANY WHOLESALE\/STOCKIST ENQUIRIES, STYLISTS OR BRAND COLLABORATIONS, CONTACT: ROSALINDIS@NIIHAI.CO.UK<\/p>"
+            }
+          },
+          "cc41c325-0d41-4ab9-bbb0-c24e3d9328c3": {
+            "type": "summary",
+            "settings": {
+              "subtitle": "<p>CLEARLY STATE IN SUBJECT LINE REASON FOR CONACT<\/p>",
+              "interior": ""
             }
           }
         },
         "block_order": [
-          "59f2a4ce-8fdb-4df8-ada0-2259859ab097"
+          "02b4e8d3-2b15-4d0c-aec7-46c54e703462",
+          "29b955b5-687a-4c66-9ed2-88f7f7e0c735",
+          "e04ba665-87b0-45fa-b629-4422e1524012",
+          "cc41c325-0d41-4ab9-bbb0-c24e3d9328c3"
         ],
         "settings": {
         }
