@@ -11,13 +11,6 @@
             <div class="title-seccion">{{ block.settings.title }}</div>
             {% endunless %}
           </div>
-        {% when 'summary' %}
-        {% unless block.settings.subtitle and block.settings.interior  == blank %}
-          <details>
-            <summary>{{ block.settings.subtitle }}</summary>
-            <div class="interior">{{ block.settings.interior }}</div>
-          </details>
-        {% endunless %}
     {% endcase %}
   {% endfor %}
 </section>
@@ -33,22 +26,6 @@
           "type": "richtext",
           "id": "title",
           "label": "Title"
-        }
-      ]
-    },
-    {
-      "type": "summary",
-      "name": "Question",
-      "settings": [
-        {
-          "type": "richtext",
-          "id": "subtitle",
-          "label": "Subtitle"
-        },
-        {
-          "type": "richtext",
-          "id": "interior",
-          "label": "Interior"
         }
       ]
     }
