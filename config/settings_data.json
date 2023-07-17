@@ -51,6 +51,22 @@
         ],
         "settings": {
         }
+      },
+      "contact": {
+        "type": "contact",
+        "blocks": {
+          "59f2a4ce-8fdb-4df8-ada0-2259859ab097": {
+            "type": "text",
+            "settings": {
+              "title": "<p>IF YOU NEED ANY HELP PLEASE EMAIL<a href=\"mailto:HELP@NIIHAI.CO.UK\">HELP@NIIHAI.CO.UK<\/a> <\/p><p> <\/p><p>CLEARLY STATE IN SUBJECT LINE REASON FOR CONACT<\/p><p> <\/p><p>OUR CUSTOMER SERVICE TEAM WORKS MONDAY TO FRIDAY, PLEASE ALLOW 1-2 WORKING DAYS FOR A RESPONSE.<\/p><p> <\/p><p>FOR ANY WHOLESALE\/STOCKIST ENQUIRIES, STYLISTS OR BRAND COLLABORATIONS, CONTACT: ROSALINDIS@NIIHAI.CO.UK<\/p><p> <\/p><p>WE DO NOT REPLY TO CUSTOMER SERVICE QUERIES VIA DM<\/p><p> <\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "59f2a4ce-8fdb-4df8-ada0-2259859ab097"
+        ],
+        "settings": {
+        }
       }
     },
     "content_for_index": [
