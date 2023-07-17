@@ -8,13 +8,37 @@
           "e03132f6-ac45-4ec3-afcb-fe5a2169d814": {
             "type": "summary",
             "settings": {
-              "subtitle": "<p>THE ITEM I WANT TO BUY IS OUT OF STOCK, WHEN WILL IT BE RE STOCKED? <\/p>",
-              "interior": "<p>THE ITEM I WANT TO BUY IS OUT OF STOCK, WHEN WILL IT BE RE STOCKED? <\/p>"
+              "subtitle": "<p>THE ITEM I WANT TO BUY IS OUT OF STOCK, WHEN WILL IT BE RE STOCKED?<\/p>",
+              "interior": "<p>ALL UPDATES FOR RESTOCKS & DROPS ARE ANNOUNCED ON OUR INSTAGRAM. ALTERNATIVELY YOU CAN SUBSCRIBE TO OUR MAILING LIST!<\/p><p>MAKE SURE YOU ARE FOLLOWING US @NII.HAI AND HAVE NOTIFICATIONS TURNED ON SO YOU DON’T MISS A THING!<\/p>"
+            }
+          },
+          "aa241d1e-9803-4092-bb3a-b9e1cdda2d10": {
+            "type": "summary",
+            "settings": {
+              "subtitle": "<p>WHERE CAN I FIND MY ORDER CONFIRMATION?<\/p>",
+              "interior": "<p>SHORTLY AFTER MAKING AN ORDER YOU SHOULD RECEIVE CONFIRMATION SENT TO THE EMAIL YOU PROVIDED ATCHECKOUT.<\/p><p>SHORTLY AFTER MAKING AN ORDER YOU SHOULD RECEIVE CONFIRMATION SENT TO THE EMAIL YOU PROVIDED AT CHECKOUT.<\/p><p><br\/>IF IT IS NOT IN YOUR INBOX PLEASE CHECK YOUR SPAM\/JUNK FOLDER.<\/p><p><br\/>IF AFTER THIS IF YOU HAVE STILL NOT RECEIVED CONFIRMATION, PLEASE EMAIL HELP@NIIHAI.CO.UK PLEASE STATE IN THE SUBJECT LINE ’NO ORDER CONFIRMATION’<br\/>IN THE BODY OF THE EMAIL PLEASE STATE:<\/p><p> <\/p><p>NAME<br\/>EMAIL<br\/>DATE OF ORDER ADDRESS<br\/>ORDER CONTENTS<\/p><p> <\/p><p>SO WE CAN LOCATE YOUR ORDER INFORMATION AND RE SEND THIS TO YOU.<\/p><p> <\/p><p> <\/p><p> <\/p><p>EDIT ORDER<\/p>"
+            }
+          },
+          "9d6ced68-3d74-4737-97b4-e2c9e6876d50": {
+            "type": "summary",
+            "settings": {
+              "subtitle": "<p>HOW DO I CHANGE MY ADDRESS?<\/p>",
+              "interior": "<p><br\/>WE ASK YOU TO PLEASE CHECK YOUR DELIVERY ADDRESS IS CORRECT BEFORE PLACING YOUR ORDER.<\/p><p>IF THE DELIVERY ADDRESS NEEDS TO CHANGED PLEASE CONTACT HELP@NIIHAI.CO.UK PLEASE STATE IN THE SUBJECT LINE ‘EDIT ADDRESS - (YOUR # ORDER NUMBER)’ IN THE BODY OF THE EMAIL PLEASE STATE:<\/p><p>NAME<br\/>ORDER NUMBER NEW ADDRESS<\/p><p>ONLY IF YOUR ORDER IS NOT YET FULFILLED WE CAN MAKE RELEVANT CHANGES TO YOUR ADDRESS.<\/p>"
+            }
+          },
+          "485a5b69-69d9-4c97-804f-faace3a041a5": {
+            "type": "summary",
+            "settings": {
+              "subtitle": "<p>HOW DO I CHANGE THE SIZE ORDERED?<\/p>",
+              "interior": "<p>WE ASK YOU TO PLEASE CHECK YOU HAVE CHOSEN THE CORRECT SIZE BEFORE PLACING YOUR ORDER. SIZES CAN NOT BE CHANGED.<\/p>"
             }
           }
         },
         "block_order": [
-          "e03132f6-ac45-4ec3-afcb-fe5a2169d814"
+          "e03132f6-ac45-4ec3-afcb-fe5a2169d814",
+          "aa241d1e-9803-4092-bb3a-b9e1cdda2d10",
+          "9d6ced68-3d74-4737-97b4-e2c9e6876d50",
+          "485a5b69-69d9-4c97-804f-faace3a041a5"
         ],
         "settings": {
         }
