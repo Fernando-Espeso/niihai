@@ -19,6 +19,12 @@
               "interior": "<p>SHORTLY AFTER MAKING AN ORDER YOU SHOULD RECEIVE CONFIRMATION SENT TO THE EMAIL YOU PROVIDED ATCHECKOUT.<\/p><p>SHORTLY AFTER MAKING AN ORDER YOU SHOULD RECEIVE CONFIRMATION SENT TO THE EMAIL YOU PROVIDED AT CHECKOUT.<\/p><p><br\/>IF IT IS NOT IN YOUR INBOX PLEASE CHECK YOUR SPAM\/JUNK FOLDER.<\/p><p><br\/>IF AFTER THIS IF YOU HAVE STILL NOT RECEIVED CONFIRMATION, PLEASE EMAIL HELP@NIIHAI.CO.UK PLEASE STATE IN THE SUBJECT LINE ’NO ORDER CONFIRMATION’<br\/>IN THE BODY OF THE EMAIL PLEASE STATE:<\/p><p> <\/p><p>NAME<br\/>EMAIL<br\/>DATE OF ORDER ADDRESS<br\/>ORDER CONTENTS<\/p><p> <\/p><p>SO WE CAN LOCATE YOUR ORDER INFORMATION AND RE SEND THIS TO YOU.<\/p><p> <\/p><p> <\/p><p> <\/p><p>EDIT ORDER<\/p>"
             }
           },
+          "32f6e1e2-c175-4c94-896b-45e15a67f010": {
+            "type": "text",
+            "settings": {
+              "title": "<p>EDIT ORDER<\/p>"
+            }
+          },
           "9d6ced68-3d74-4737-97b4-e2c9e6876d50": {
             "type": "summary",
             "settings": {
@@ -32,13 +38,22 @@
               "subtitle": "<p>HOW DO I CHANGE THE SIZE ORDERED?<\/p>",
               "interior": "<p>WE ASK YOU TO PLEASE CHECK YOU HAVE CHOSEN THE CORRECT SIZE BEFORE PLACING YOUR ORDER. SIZES CAN NOT BE CHANGED.<\/p>"
             }
+          },
+          "cace6c80-e970-45a2-a46c-040b81337f12": {
+            "type": "summary",
+            "settings": {
+              "subtitle": "<p>WHEN WILL I RECEIVE MY ORDER?<\/p>",
+              "interior": "<p>WE AIM TO DISPATCH MOST ORDERS WITHIN 72 WORKING HOURS AFTER RECEIVING, MONDAY TO FRIDAY. (EXCLUDING PUBLIC HOLIDAYS.)<\/p><p>ONCE YOUR ORDER HAS BEEN DISPATCHED YOU WILL RECEIVE AN EMAIL NOTIFYING YOU THAT YOUR ORDER HAS BEEN SHIPPED. THIS EMAIL WILL CONTAIN YOUR TRACKING NUMBER. PLEASE USE THIS TO FOLLOW YOUR ORDERS PROGRESS.<\/p><p>SEE AVERAGE DELIVERY TIMES FOR UK\/INTERNATIONAL ORDERS BELOW.<br\/>PLEASE NOTE DISPATCH, SHIPPING AND DELIVERY TIMES ARE NOT GUARANTEED THEY ARE MERELY AN AIM.<\/p><ol><li>UK<br\/>AVERAGE DELIVERY TIMES WITHIN THE UK ARE AROUND 1 WEEK.<\/li><li>INTERNATIONAL<br\/>AVERAGE DELIVERY TIMES FOR INTERNATIONAL ORDERS ARE AROUND 2-3 WEEKS.<\/li><\/ol>"
+            }
           }
         },
         "block_order": [
           "e03132f6-ac45-4ec3-afcb-fe5a2169d814",
           "aa241d1e-9803-4092-bb3a-b9e1cdda2d10",
+          "32f6e1e2-c175-4c94-896b-45e15a67f010",
           "9d6ced68-3d74-4737-97b4-e2c9e6876d50",
-          "485a5b69-69d9-4c97-804f-faace3a041a5"
+          "485a5b69-69d9-4c97-804f-faace3a041a5",
+          "cace6c80-e970-45a2-a46c-040b81337f12"
         ],
         "settings": {
         }
