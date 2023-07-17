@@ -275,14 +275,20 @@ a {
 
 /* Menu styles */
 header {
+  width: calc(100vw - 10px);
   text-transform: uppercase;
-  position: sticky;
+  position: fixed;
   top: 10px;
   z-index: 100;
 }
 
 div#shopify-section-hero {
     grid-column: span 8;
+}
+
+div#shopify-section-hero img{
+    height: 100%;
+    object-fit: cover;
 }
 
 .menu {
@@ -315,7 +321,8 @@ div#shopify-section-hero {
 }
 
 .categories {
-  z-index: 10;
+  display: none;
+  z-index: 102;
   position: fixed;
   top: 29px;
   width: 200px;
@@ -347,6 +354,7 @@ div#shopify-section-hero {
   left: 50%;
   transform: translate(-50%, 0);
   top: 29px;
+  display: none;
   width: 200px;
   text-transform: uppercase;
 }
@@ -369,7 +377,9 @@ div#shopify-section-hero {
 .brand-links > li:hover {
   background-color: var(--darker);
 }
-
+.main_page{
+  margin-top: 30px;
+}
 .open {
   display: none;
 }
@@ -410,7 +420,7 @@ div#shopify-section-hero {
 .product {
   position: relative;
   display: grid;
-  height: 100%;
+  height: fit-content;
   display: grid;
   grid-column: span 4;
 }
@@ -735,9 +745,13 @@ span#close {
 .variations #add-to-bag {
   font-family: 'Univers LT Std';
   font-size: 10px!important;
-  background: yellow;
+  background: var(--darker);
   height: 40px;
   width: 100%;
+}
+
+.variations #add-to-bag:hover {
+  background: yellow;  
 }
 
 .info-size {
@@ -759,9 +773,12 @@ span#close {
 }
 
 .menu-title {
+  top: 30px;
+  z-index: 10;
+  position: sticky;
+  margin-top: 24px;
   width: 200px;
-  padding: 5px;
-  padding-bottom: 2px;
+  padding: 5px 5px 2px;
 }
 
 .menu-title > span {
