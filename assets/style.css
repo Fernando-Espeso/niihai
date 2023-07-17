@@ -428,6 +428,11 @@ details > summary::-webkit-details-marker {
   padding-bottom: 40px;
 }
 
+.title-seccion{
+  padding: 5px;
+  padding-bottom: 2px;
+}
+
 /* Shop styles */
 .main {
   flex-grow: 1;
