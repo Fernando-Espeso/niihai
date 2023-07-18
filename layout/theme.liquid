@@ -77,25 +77,32 @@ fernandoepeso.info
     </div>
     <!-- Header -->
     <header id="header">
-      <div class="menu-open">MENU</div>
       <div class="menu">
+        <div class="menu-open">MENU</div>
         <div class="shop">SHOP</div>
-        <div class="search">SEARCH PRODUCT</div>
+        <div class="search">
+          <a>
+            <form autocomplete="off" action="{{ routes.search_url }}" style="display:flex;">
+             <input type="hidden" name="type" value="product">
+             <input type="text" placeholder="SEARCH PRODUCTS" name="q" value="{{ search.terms | escape }}">
+           </form>
+          </a>
+        </div>
         <div class="brand">NIIHAI</div>
       </div>
       <div class="cart-part">
         {% for link in linklists.top-bar.links %}
           <li class="nain" {% if link.active %}class="active"{% endif %}><a href="{{ link.url }}">{{ link.title }}</a></li>
         {% endfor %}
-        <li>
-          <a id="cart" {% if template == 'cart' %}  style="color:green;"{% endif %} href="/cart">
-            BAG (&nbsp;<span class="cart-total">
+        <li {% if template == 'cart' %}  style="background-color:yellow;"{% endif %}>
+          <a id="cart" href="/cart">
+            BAG <span class="cart-total">
               {%- if cart.item_count == 0 -%}
                 0
               {%- else -%}
                 {{- cart.item_count -}}
               {%- endif -%}
-            </span>&nbsp;)
+            </span>
           </a>
         </li>
       </div>
@@ -103,9 +110,9 @@ fernandoepeso.info
     <div class="categories">
       {% assign current_collection_handle = collection.handle | default: '' %}
       {% assign product_count = collections.all.products_count %}
-      <li {% if request.path == '/collections/all' %}class="active"{% endif %}><a href="/collections/all">SHOP ALL</a><span> {{ product_count }}</span></li>
+      <li {% if request.path == '/collections/all' %}class="active"{% endif %} ><a href="/collections/all">ALL<span> {{ product_count }}</span></a></li>
       {% for collection in collections %}
-        <li {% if collection.handle == current_collection_handle %} class="active" {% endif %}>
+        <li id="{{ collection.title }}" {% if collection.handle == current_collection_handle %} class="active" {% endif %}>
           <a href="{{ collection.url }}">{{ collection.title }} <span>{{ collection.all_products_count }}</span></a>
         </li>
       {% endfor %}
@@ -129,7 +136,8 @@ fernandoepeso.info
     {% render 'mws_apo_init' %}
   </div>
   <footer>
-    <div>© NIIHAI UK LONDON {{ 'now' | date: "%Y" }}</div>
+    <div class="hide">© NIIHAI UK LONDON {{ 'now' | date: "%Y" }}</div>
+    <div class="credits">DESIGN AND CODE BY <a href="https://www.fernandoespeso.info/">FERNANDO ESPESO</a></div>
   </footer>
 </body>
 </html>

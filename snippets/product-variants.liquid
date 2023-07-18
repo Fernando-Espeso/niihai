@@ -2,13 +2,24 @@
 <product-variants class="" data-url="{{ product.url | within: collection }}" {{ block.shopify_attributes }}>
   {%- for option in product.options_with_values -%}
     <div class="product-variant-item">
-      <div class="product-variant-title">
-        <label class="" for="Option-{{ forloop.index0 }}">
-          {{ option.name }}
+      <div class="product-variant-title"
+      {%- if product.has_only_default_variant -%}
+          style="display:none"
+          {%- elsif variants > 1 -%}
+          style="display:block"
+          {%- endif -%}>
+        <label class="choose" for="Option-{{ forloop.index0 }}">
+          CHOOSE YOUR {{ option.name }}
         </label>
       </div>
 
-      <fieldset class="" data-type="radio">
+      <fieldset class="" data-type="radio"
+      {%- if product.has_only_default_variant -%}
+          style="display:none"
+          {%- elsif variants > 1 -%}
+          style="display:block"
+          {%- endif -%}
+      >
         {%- for value in option.values -%}
           {%- liquid
             assign optionNumber = 'option' | append: option.position

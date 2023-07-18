@@ -106,7 +106,8 @@
       <div class="product-title">
         <a href="{{ product.url }}">{{ product.title }}</a>
       </div>
-      <div class="product-price">
+      <div class="product-price"
+      >
         {% if product.available %}
           {% if product.price_varies %}
             <span>{{ product.price_min | money }}</span> – <span>{{ product.price_max | money }}</span>

@@ -19,18 +19,46 @@ document.addEventListener("DOMContentLoaded", function(){
       lazyImageObserver.observe(lazyImage);
     });
   }
+
+  //height on Iphone
+  document.addEventListener('DOMContentLoaded', function(){
+  	var w = window.innerWidth,
+  	h = window.innerHeight;
+  	document.documentElement.style.setProperty('--h', h + 'px');
+
+  	m = document.getElementById("menu").offsetHeight;
+  	document.documentElement.style.setProperty('--m', m + 'px');
+
+  });
+
+  //height on Resize
+  window.addEventListener("resize", onResizeFunction);
+  function onResizeFunction (e){
+  	var w = window.innerWidth,
+  	h = window.innerHeight;
+  	document.documentElement.style.setProperty('--h', h + 'px');
+
+  	m = document.getElementById("menu").offsetHeight;
+  	document.documentElement.style.setProperty('--m', m + 'px');
+
+  }
+
+
 $('#related .main>.product:gt(3)').remove();
 
-$('.menu_open').click(function(){
-     $('.menu').toggleClass("open");
-     $('.nain').toggleClass("open");
+$('.menu-open').click(function(){
+     $('.categories').toggle();
+     $('.brand-links').toggle();
 });
+
 $('.shop').click(function(){
      $('.categories').toggle();
 });
+
 $('.brand').click(function(){
      $('.brand-links').toggle();
 });
+
 $('#close').click(function(){
      $('.filters_shop').removeClass("open");
      $('#close').hide();
@@ -43,7 +71,6 @@ $('#remove_filter').click(function(){
      $('#filte').html(0);
      $('#remove_filter').removeClass("line");
      $('.product').sort(function(a, b){
-
 
      }).prependTo('#products');
 });
@@ -66,54 +93,6 @@ $('#remove_filter').click(function(){
                            }).prependTo('#products');
                    }
            });
-  //FILTERS
-          $('.filter:not(.sort)').click(function(){
-            var t = $(this),
-                W = t.data('wrapper'),
-                T = t.data('type'),
-                c = t.data('class'),
-                f = t.data('filter');
-
-            if(!t.hasClass('active')){
-              //Active/deactive filter
-              t.addClass('active')
-               .parent().siblings().children().removeClass('active');
-
-              //Hide products
-              $('.product').addClass('active-'+T);
-
-              //Filter
-              $(W).removeClass().addClass(c);
-              var fa = $(W).attr('class'),
-                  ca = fa.split(/\s+/);
-              $.each(ca, function(index, value){
-                $('.product' + value).removeClass('active-'+T);
-              });
-
-
-              $('#filte').text($('.filter.active').length)
-
-            }
-
-            if($('.filter.'+T+'.active').length == 0){
-               $('.filte').html('').hide()
-             }else{
-               if(t.hasClass('active')){
-                 if($('.filter.'+T+'.active').length == 1){
-                   $('.filte').html(
-                     '<span data-'+T+'="'+c+'">' + $.trim(t.text()) + '</span>'
-                   ).show()
-                 }else{
-                   $('.filte').html(
-                     '<span data-'+T+'="'+c+'">' + $.trim(t.text()) + '</span>' + $('.filte').html()
-                   );
-                 }
-               }else{
-                 $('span[data-'+T+'="'+c+'"]').remove()}
-
-
-              }
-          });
           const videoElement = document.querySelector('video');
           const playPauseButton = document.querySelector('button');
 
