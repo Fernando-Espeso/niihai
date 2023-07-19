@@ -51,6 +51,11 @@ $('.menu-open').click(function(){
      $('.brand-links').toggle();
 });
 
+$('#add-to-bag').click(function(){
+     $('.cart-part li a').addClass("blink");
+     $('.cart-part li').addClass("yellow");
+});
+
 $('.shop').click(function(){
      $('.categories').toggle();
 });

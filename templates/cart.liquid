@@ -1,52 +1,59 @@
 {% if cart.item_count > 0 %}
-    <form id="cart-wrapper" action="/cart" method="post">
-        {% for item in cart.items %}
-            <div class="item">
-                <div class="thumb">
-                    <img class="lazy" src="{{ item | img_url: 'thumb' }}" data-src="{{ item | img_url: 'master' }}" alt="{{ item.title | escape }}" />
-                </div>
-                <div class="row">
-                    <div class="main-information">
-                        <div class="product-title">{{ item.product.title }}</div><br>
-                        <div class="product-price">{{ item.price | money }}</div>
-                    </div>
-                </div>
-                    {% unless item.product.options contains 'Title' %}
-                        <!--Variations-->
-                    <div>
-                        {{ option.name }} SIZE
-                        <div class="item-variations">
-                            {%- for option_title in item.product.options -%}
-                                {{ item.variant.options[forloop.index0] }}{% unless forloop.last  %}<br> {% endunless %}
-                            {%- endfor -%}
-                        </div>
-                    </div>
-                    {% endunless %}
-                    <div class="title-seccion"><a href="/cart/change?line={{ forloop.index }}&quantity=0">REMOVE</a></div>
-                    <div class="item-quantity">
-                        <span data-field="updates" class="quantity-button minus"><span>–</span></span>
-                        <input type="hidden" step="1" max="9" value="{{ item.quantity }}" name="updates[]" class="inactive quantity-field align-center">
-                        <span class="quantity-wrap"></span>
-                        <span data-field="updates" class="quantity-button plus">
-                            <span class="addmore">+</span>
-                            {% if cart.items.available %}
-                            {% else %}
-                            {% endif %}
-                        </span>
-                    </div>
-                </div>
-        {% endfor %}
-</form>
-        <div class="total">
-            <div>SHIPPING</div>
-            <div style="text-align:right">Calculated at checkout</div>
-            SUBTOTAL
-            <div style="text-align:right" class="pri">{{ cart.total_price | money }}</div>
-            <input id="update-cart" type="submit" name="update" value="Update cart" style="display: none" />
-            <button id="checkout" type="submit" name="checkout">PROCEED TO CHECKOUT</button>
+  <form id="cart-wrapper" action="/cart" method="post">
+    <div class="total">
+      <div>SUBTOTAL</div>
+      <div>{{ cart.total_price | money }}</div>
+      <div>SHIPPING</div>
+      <div>CALCULATED AT CHECKOUT</div>
+      <input id="update-cart" type="submit" name="update" value="Update cart" style="display: none" />
+      <button id="checkout" type="submit" name="checkout">PROCEED TO CHECKOUT</button>
+    </div>
+    {% for item in cart.items %}
+      <div class="item">
+        <div class="thumb">
+          <img class="lazy" src="{{ item | img_url: 'thumb' }}" data-src="{{ item | img_url: 'master' }}" alt="{{ item.title | escape }}" />
         </div>
-    </form>
+        <div style="background-color:var(--darker);" class="row">
+          <div class="main-information">
+            <div class="product-title">{{ item.product.title }}</div><br>
+            <div class="product-price">{{ item.price | money }}</div>
+          </div>
+        </div>
+        <div class="double">
+          <div class="remove"><a href="/cart/change?line={{ forloop.index }}&quantity=0">REMOVE</a></div>
+          <div class="item-quantity">
+            <span data-field="updates" class="quantity-button minus"><span>–</span></span>
+            <input type="hidden" step="1" max="9" value="{{ item.quantity }}" name="updates[]" class="inactive quantity-field align-center">
+            <span class="quantity-wrap"></span>
+            <span data-field="updates" class="quantity-button plus">
+              <span class="addmore">+</span>
+              {% if cart.items.available %}
+              {% else %}
+              {% endif %}
+            </span>
+          </div>
+        </div>
+        {% unless item.product.options contains 'Title' %}
+          <!--Variations-->
+          <div class="double">
+            <div class="siz">SIZE</div>
+            <div class="siz">
+              {%- for option_title in item.product.options -%}
+                {{ item.variant.options[forloop.index0] }}{% unless forloop.last  %}<br> {% endunless %}
+              {%- endfor -%}
+            </div>
+          </div>
+          <div class="double">
+            <div class="siz">SUBTOTAL</div>
+            <div class="siz">{{ item.line_price | money }}</div>
+          </div>
+        {% endunless %}
+
+      </div>
+
+    {% endfor %}
+  </form>
 {% else %}
-    <!--Empty Bag-->
-    <div class="empty">YOUR CART IS CURRENTLY EMPTY</div>
+  <!--Empty Bag-->
+  <div class="menu-title">YOUR CART IS CURRENTLY EMPTY</div>
 {% endif %}

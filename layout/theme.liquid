@@ -58,7 +58,6 @@ fernandoepeso.info
              {%- if template == 'cart' and cart.item_count == 0 -%}
              template-cart-empty
              {%- endif -%}">
-  <div class="m">
     <div id="loader"
          style="position: fixed;
                 top: 0;
@@ -94,7 +93,7 @@ fernandoepeso.info
         {% for link in linklists.top-bar.links %}
           <li class="nain" {% if link.active %}class="active"{% endif %}><a href="{{ link.url }}">{{ link.title }}</a></li>
         {% endfor %}
-        <li {% if template == 'cart' %}  style="background-color:yellow;"{% endif %}>
+        <li {% if cart.item_count > 0 %} style="background-color:yellow;"{% endif %}  {% if template == 'cart' %}  style="background-color:yellow;"{% endif %}>
           <a id="cart" href="/cart">
             BAG <span class="cart-total">
               {%- if cart.item_count == 0 -%}
@@ -127,17 +126,15 @@ fernandoepeso.info
       {% endfor %}
     </div>
     {{ content_for_layout }}
-    {%- if template contains 'product' -%}
-      {{ 'global-product.js' | asset_url | script_tag }}
-    {%- endif -%}
-    {%- if template == 'product' -%}
-      {% render 'ajaxify-cart' %}
-    {%- endif -%}
-    {% render 'mws_apo_init' %}
-  </div>
   <footer>
     <div class="hide">© NIIHAI UK LONDON {{ 'now' | date: "%Y" }}</div>
     <div class="credits">DESIGN AND CODE BY <a href="https://www.fernandoespeso.info/">FERNANDO ESPESO</a></div>
   </footer>
+  {%- if template contains 'product' -%}
+    {{ 'global-product.js' | asset_url | script_tag }}
+  {%- endif -%}
+  {%- if template == 'product' -%}
+	   {% render 'ajaxify-cart' %}
+     {%- endif -%}{% render 'mws_apo_init' %}
 </body>
 </html>
