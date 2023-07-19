@@ -143,15 +143,15 @@
       "notice-brand": {
         "type": "notice-brand",
         "blocks": {
-          "7f2b179c-18fb-4ab8-b2d3-1e3f3a1c6248": {
+          "ab03ed59-d074-46c8-ac43-e6aabfea6ed3": {
             "type": "text",
             "settings": {
-              "title": "<p>*There is an unfortunate customs issue which may result in your order being returned (international orders only) we are so sorry for this - if this affects your order we will organise a re shipment once we receive this order back with us<\/p><p> <\/p><p>As a small team we are doing our best to fulfil all orders with the urgency and care they deserve. We ship all of our orders ourselves from our warehouse in london.<\/p><p> <\/p><p>We are very sorry for any inconvenience this may cause. Thank you for your understanding and patience. <\/p><p> <\/p><p>With love, <\/p><p> <\/p><p>Nii hai <\/p><p>*Shipping fees are fixed and non refundable, orders will not be cancelled due to delays*<\/p>"
+              "title": "<p>*THERE IS AN UNFORTUNATE CUSTOMS ISSUE WHICH MAY RESULT IN YOUR ORDER BEING RETURNED (INTERNATIONAL ORDERS ONLY) WE ARE SO SORRY FOR THIS - IF THIS AFFECTS YOUR ORDER WE WILL ORGANISE A RE SHIPMENT ONCE WE RECEIVE THIS ORDER BACK WITH US<\/p><p> <\/p><p>AS A SMALL TEAM WE ARE DOING OUR BEST TO FULFIL ALL ORDERS WITH THE URGENCY AND CARE THEY DESERVE. WE SHIP ALL OF OUR ORDERS OURSELVES FROM OUR WAREHOUSE IN LONDON.<\/p><p> <\/p><p>WE ARE VERY SORRY FOR ANY INCONVENIENCE THIS MAY CAUSE. THANK YOU FOR YOUR UNDERSTANDING AND PATIENCE. <\/p><p> <\/p><p>WITH LOVE, <\/p><p> <\/p><p>NII HAI <\/p><p>*SHIPPING FEES ARE FIXED AND NON REFUNDABLE, ORDERS WILL NOT BE CANCELLED DUE TO DELAYS*<\/p>"
             }
           }
         },
         "block_order": [
-          "7f2b179c-18fb-4ab8-b2d3-1e3f3a1c6248"
+          "ab03ed59-d074-46c8-ac43-e6aabfea6ed3"
         ],
         "settings": {
         }
