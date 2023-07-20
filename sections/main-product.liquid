@@ -92,6 +92,15 @@
         {% endunless %}
       </div>
     </div>
+    {% assign info = product.metafields.custom.info | default: '' %}
+    {% assign shipping = product.metafields.custom.shiiping | default: '' %}
+    {% assign policies = product.metafields.custom.policies | default: '' %}
+
+    {% if info != blank %}
+      <div class="custom-metafield">
+        {{% product.metafields.custom.info %}}
+      </div>
+    {% endif %}
   </div>
   <!--GALLERY-->
   <div class="product_gallery">
