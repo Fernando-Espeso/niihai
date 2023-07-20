@@ -127,8 +127,15 @@ fernandoepeso.info
     </div>
     {{ content_for_layout }}
   <footer>
+    <ul class="nav-brand">
+      {% for link in linklists.main-menu.links %}
+        <li {% if link.active %}class="active"{% endif %}><a class="{{ link.title }}" href="{{ link.url }}">{{ link.title }}</a></li>
+      {% endfor %}
+    </ul>
+    <div class="cred">
     <div class="hide">© NIIHAI UK LONDON {{ 'now' | date: "%Y" }}</div>
     <div class="credits">DESIGN AND CODE BY <a href="https://www.fernandoespeso.info/">FERNANDO ESPESO</a></div>
+    </div>
   </footer>
   {%- if template contains 'product' -%}
     {{ 'global-product.js' | asset_url | script_tag }}

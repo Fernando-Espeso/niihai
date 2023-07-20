@@ -495,6 +495,7 @@ details > summary::-webkit-details-marker {
 }
 /* Shop styles */
 .main {
+  min-height: 100vh;
   flex-grow: 1;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -906,13 +907,15 @@ li#SALE{
 
 /* Footer styles */
 footer {
+ justify-content: space-between;
+  padding-top: 200px;
+  display: flex;
   text-align: right;
+  align-items: end;
   padding: 5px;
   margin-top: auto;
 }
-footer > div{
-  padding-top: 200px;
-}
+
 footer:hover .credits{
   display: block;
 }
@@ -921,18 +924,24 @@ footer .credits{
   display: none;
 }
 
+ul.nav-brand {
+  text-align: left;
+}
+
 footer:hover .hide{
   display: none;
 }
 /* Buy block styles */
 .buy-block {
   z-index: 10;
-  bottom: 0px;
-  left: 50%;
-  transform: translate(-50%, 0);
+  top: 29px;
+  right: 5px;
   position: fixed;
   width: 500px;
   padding-bottom: 10px;
+}
+#related .product{
+grid-column: span 3;
 }
 
 #bag {
