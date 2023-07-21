@@ -92,15 +92,35 @@
         {% endunless %}
       </div>
     </div>
-    {% assign info = product.metafields.custom.info | default: '' %}
-    {% assign shipping = product.metafields.custom.shiiping | default: '' %}
+    {% assign new = product.metafields.custom.new | default: '' %}
+    {% assign shipping = product.metafields.custom.shipping | default: '' %}
     {% assign policies = product.metafields.custom.policies | default: '' %}
-
+    <div class="desplegable">
     {% if info != blank %}
-      <div class="custom-metafield">
-        {{% product.metafields.custom.info %}}
+    <details>
+      <summary>INFO PRODUCT</summary>
+      <div class="interior">
+        {{ product.metafields.custom.info-product }}
       </div>
+      </details>
     {% endif %}
+    {% if shipping != blank %}
+    <details>
+      <summary>SHIPPING TIME</summary>
+      <div class="interior">
+        {{ product.metafields.custom.shipping-info }}
+      </div>
+      </details>
+    {% endif %}
+    {% if policies != blank %}
+    <details>
+      <summary>POLCIES</summary>
+      <div class="interior">
+        {{ product.metafields.custom.policies-info }}
+      </div>
+      </details>
+    {% endif %}
+    </div>
   </div>
   <!--GALLERY-->
   <div class="product_gallery">

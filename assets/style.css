@@ -500,6 +500,11 @@ details > summary::-webkit-details-marker {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
+.related {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
 
 #products {
   flex-grow: 1;
