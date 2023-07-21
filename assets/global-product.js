@@ -22,5 +22,5 @@
   };
 })(jQuery);
 //Related
-$('#related .product:nth-child(3)').nextAll().remove();  
+$('#related .product:nth-child(4)').nextAll().remove();  
 $('#related .product').shuffle();

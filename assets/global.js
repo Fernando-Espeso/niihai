@@ -79,6 +79,21 @@ $('#remove_filter').click(function(){
 
      }).prependTo('#products');
 });
+
+var show = true;
+$(document).scroll(function () {
+    var y = $(this).scrollTop();
+    var box = document.querySelector('.product_gallery'),
+        height = box.offsetHeight;
+    if (y > height) {
+      if(show){
+        $('.buy-block').hide();
+      }
+    } else {
+        $('.buy-block').show();
+    }
+});
+
 });
 
  $( document ).ready(function() {

@@ -92,15 +92,15 @@
         {% endunless %}
       </div>
     </div>
-    {% assign new = product.metafields.custom.new | default: '' %}
-    {% assign shipping = product.metafields.custom.shipping | default: '' %}
-    {% assign policies = product.metafields.custom.policies | default: '' %}
+    {% assign info = product.metafields.custom.info_product | default: '' %}
+    {% assign shipping = product.metafields.custom.shipping-info | default: '' %}
+    {% assign policies = product.metafields.custom.polcies_info | default: '' %}
     <div class="desplegable">
     {% if info != blank %}
     <details>
       <summary>INFO PRODUCT</summary>
       <div class="interior">
-        {{ product.metafields.custom.info-product }}
+        {{ product.metafields.custom.info_product }}
       </div>
       </details>
     {% endif %}
@@ -116,7 +116,7 @@
     <details>
       <summary>POLCIES</summary>
       <div class="interior">
-        {{ product.metafields.custom.policies-info }}
+        {{ product.metafields.custom.polcies_info }}
       </div>
       </details>
     {% endif %}
