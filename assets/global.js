@@ -84,13 +84,13 @@ var show = true;
 $(document).scroll(function () {
     var y = $(this).scrollTop();
     var box = document.querySelector('.product_gallery'),
-        height = box.offsetHeight;
+        height = box.offsetHeight - 100;
     if (y > height) {
       if(show){
-        $('.buy-block').hide();
+        $('.buy-block').addClass("active");
       }
     } else {
-        $('.buy-block').show();
+        $('.buy-block').removeClass("active");
     }
 });
 

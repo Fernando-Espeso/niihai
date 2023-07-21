@@ -357,12 +357,14 @@ div#shopify-section-hero img{
 }
 .left{
   position: fixed!important;
-  top: 24px!important;
-  left: 0;
+  top: 29px!important;
+  left: 5px;
   padding: 5px;
   padding-bottom: 2px;
-  background-color: red;
-  color: white;
+  background-color: white!important;
+  animation: blinking 1s infinite;
+  animation-iteration-count: 3;
+  color: black;
 }
 .choose{
   text-transform: uppercase;
@@ -479,8 +481,18 @@ details > summary::-webkit-details-marker {
 }
 
 .desplegable .interior{
-  padding-top: 20px;
-  padding-bottom: 40px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: white;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.desplegable .open{
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: white;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .title-seccion{
@@ -820,6 +832,8 @@ span#close {
 .product-variant-title,
 .product-variant-item .option-value {
   padding: 5px;
+padding-bottom: 2px;
+}
 }
 
 .product-variant-item .option-value,
@@ -945,6 +959,9 @@ footer:hover .hide{
   position: fixed;
   width: 500px;
   padding-bottom: 10px;
+}
+.buy-block.active {
+display: none;
 }
 #related .product{
 grid-column: span 3;
