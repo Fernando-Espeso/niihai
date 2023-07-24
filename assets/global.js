@@ -93,7 +93,6 @@ $(document).scroll(function () {
         $('.buy-block').removeClass("active");
     }
 });
-
 });
 
  $( document ).ready(function() {
@@ -132,3 +131,44 @@ $(document).scroll(function () {
 
 
   });
+  // Set the time (in milliseconds) after which the screen saver will appear
+      const inactivityTimeout = 50000; // 10 seconds
+
+      // Initialize the last activity timestamp
+      let lastActivityTimestamp = Date.now();
+
+      // Function to show the screen saver with fade-in effect
+      function showScreenSaver() {
+        const screenSaverElement = document.getElementById('screenSaver');
+        screenSaverElement.classList.add('show');
+      }
+
+      // Function to hide the screen saver with fade-out effect
+      function hideScreenSaver() {
+        const screenSaverElement = document.getElementById('screenSaver');
+        screenSaverElement.classList.remove('show');
+      }
+
+      // Function to reset the inactivity timer
+      function resetInactivityTimer() {
+        lastActivityTimestamp = Date.now();
+        hideScreenSaver();
+      }
+
+      // Event listener for mousemove and click events
+      document.addEventListener('mousemove', resetInactivityTimer);
+      document.addEventListener('click', resetInactivityTimer);
+
+      // Event listener for scroll event on the document (or another scrollable element)
+      document.addEventListener('scroll', resetInactivityTimer);
+
+      // Timer to check for inactivity
+      setInterval(() => {
+        const currentTimestamp = Date.now();
+        const timeSinceLastActivity = currentTimestamp - lastActivityTimestamp;
+
+        // Check if the time since the last activity exceeds the inactivity timeout
+        if (timeSinceLastActivity >= inactivityTimeout) {
+          showScreenSaver();
+        }
+      }, 1000); // Check every second
