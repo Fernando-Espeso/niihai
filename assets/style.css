@@ -1153,6 +1153,11 @@ grid-column: span 3;
   .buy-block{
     width: 41.3%;
   }
+  .product_gallery_second, .product_gallery_last {
+    grid-template-columns: repeat(2,1fr);
+    grid-column: span 7;
+    display: grid;
+}
 }
 @media (max-width: 900px) {
   /* Menu styles */
