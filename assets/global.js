@@ -83,8 +83,10 @@ $('#remove_filter').click(function(){
 var show = true;
 $(document).scroll(function () {
     var y = $(this).scrollTop();
-    var box = document.querySelector('.product_gallery'),
-        height = box.offsetHeight - 100;
+    var box = document.querySelector('.product_gallery')
+    var box3 = document.querySelector('.product_gallery_second')
+    var box2 = document.querySelector('.product_gallery_last'),
+        height = box.offsetHeight + box3.offsetHeight + box2.offsetHeight;
     if (y > height) {
       if(show){
         $('.buy-block').addClass("active");
