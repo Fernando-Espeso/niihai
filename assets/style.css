@@ -524,7 +524,7 @@ details > summary::-webkit-details-marker {
   padding-bottom: 2px;
 }
 .talla p:nth-child(even){
-  background-color: var(--highlight);
+  background-color: var(--light);
   padding: 5px;
   padding-bottom: 2px;
 }
@@ -970,7 +970,6 @@ a.size-guide {
   color: white;
   padding: 5px;
   padding-bottom: 2px;
-  text-align: center;
 }
 
 .main-information {
