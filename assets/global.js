@@ -87,7 +87,7 @@ $(document).scroll(function () {
     var box3 = document.querySelector('.product_gallery_second')
     var box0 = document.querySelector('.buy-block')
     var box2 = document.querySelector('.product_gallery_last'),
-        height = box.offsetHeight + box3.offsetHeight + box2.offsetHeight - 200;
+        height = box.offsetHeight + box3.offsetHeight + box2.offsetHeight - 260;
     if (y > height) {
       if(show){
         $('.buy-block').addClass("active");
