@@ -830,7 +830,7 @@ span#close {
   display: grid;
 }
 .product_gallery_last img{
-  grid-column: span 2;
+  grid-column: span 2!important;
 }
 .product_information {
   display: grid;
