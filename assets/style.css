@@ -1199,6 +1199,7 @@ grid-column: span 3;
   #related .product {
     grid-column: span 12;
 }
+
 .product_gallery_second {
   grid-template-columns: repeat(2, 1fr);
   grid-column: span 12;
@@ -1232,16 +1233,17 @@ grid-column: span 3;
       grid-column: span 12;
   }
   .buy-block {
+      position: sticky;
+      top: 48px!important;
       display: block!important;
       opacity: 1!important;
-      order: 1;
+      order: 0;
       z-index: 10;
       bottom: 0;
       left: 0;
-      /* transform: translate(-50%); */
-      position: relative;
+      /* position: relative; */
       width: calc(100vw - 10px);
-      padding: 0px;
+      padding: 0;
       top: auto;
   }
 .desplegable {
