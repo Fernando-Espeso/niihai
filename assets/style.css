@@ -411,11 +411,11 @@ div#shopify-section-hero img{
 
 .main_page{
   margin-top: 24px;
-  
+
 }
 .column-sizing{
 display: grid;
-grid-column-templates: repeat(5, 1fr);
+grid-template-cokumns: repeat(5, 1fr);
 
 }
 .open {
