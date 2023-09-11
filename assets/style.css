@@ -824,7 +824,7 @@ span#close {
   grid-column: span 8;
   display: grid;
 }
-.product_gallery_last img {
+.product_gallery_last {
   margin: 0 auto;
   grid-column: span 2;
 }
