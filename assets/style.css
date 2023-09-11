@@ -841,6 +841,7 @@ span#close {
 
 .unavailable {
   color: grey;
+  text-decoration: line-through;
 }
 
 .product-sizes.hide {
