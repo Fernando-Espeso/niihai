@@ -1148,6 +1148,12 @@ grid-column: span 3;
 /* Studio styles */
 
 /* About styles */
+@media (max-width: 1200px) {
+  /* Menu styles */
+  .buy-block{
+    width: 41.3%;
+  }
+}
 @media (max-width: 900px) {
   /* Menu styles */
   .shop{
