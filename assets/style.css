@@ -523,12 +523,12 @@ details > summary::-webkit-details-marker {
   padding: 5px;
   padding-bottom: 2px;
 }
-.talla p:even {
-  background-color: var(--light);
+.talla p:nth-child(even){
+  background-color: var(--highlight);
   padding: 5px;
   padding-bottom: 2px;
 }
-.talla p:odd {
+.talla p:nth-child(odd) {
   background-color: var(--darker);
   padding: 5px;
   padding-bottom: 2px;
