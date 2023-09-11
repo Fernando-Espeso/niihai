@@ -1153,7 +1153,9 @@ grid-column: span 3;
   .shop{
     width: 100px;
   }
-
+  .buy-block{
+    width: 41.3%;
+  }
 }
 /* Responsive styles */
 @media (max-width: 800px) {
@@ -1161,9 +1163,7 @@ grid-column: span 3;
   .menu-open {
     display: block;
   }
-  .buy-block{
-    width: 41.3%;
-  }
+
   .shop{
     display: none;
   }
