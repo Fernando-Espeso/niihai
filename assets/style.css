@@ -825,8 +825,12 @@ span#close {
   display: grid;
 }
 .product_gallery_last {
-  margin: 0 auto;
-  grid-column: span 2;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column: span 8;
+  display: grid;
+}
+.product_gallery_last img{
+  grid-column: span 1;
 }
 .product_information {
   display: grid;
