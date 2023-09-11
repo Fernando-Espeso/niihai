@@ -964,7 +964,10 @@ transform: translate(-50%, -50%);
   padding-bottom: 2px;
   text-align: center;
 }
-
+.extra-info-column{
+  padding: 5px;
+  padding-bottom: 2px;
+}
 a.size-guide {
   background-color: blue;
   color: white;
