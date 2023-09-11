@@ -1033,6 +1033,7 @@ footer:hover .hide{
   right: 5px;
   position: fixed;
   width: 500px;
+  padding-bottom: 10px;
 }
 .buy-block.active {
 opacity: 0;
@@ -1152,12 +1153,16 @@ grid-column: span 3;
   .shop{
     width: 100px;
   }
+
 }
 /* Responsive styles */
 @media (max-width: 800px) {
   /* Menu styles */
   .menu-open {
     display: block;
+  }
+  .buy-block{
+    width: 41.3%;
   }
   .shop{
     display: none;
