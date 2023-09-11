@@ -85,8 +85,9 @@ $(document).scroll(function () {
     var y = $(this).scrollTop();
     var box = document.querySelector('.product_gallery')
     var box3 = document.querySelector('.product_gallery_second')
+    var box0 = document.querySelector('.buy-block')
     var box2 = document.querySelector('.product_gallery_last'),
-        height = box.offsetHeight + box3.offsetHeight + box2.offsetHeight;
+        height = box.offsetHeight + box3.offsetHeight + box2.offsetHeight - box0.offsetHeight;
     if (y > height) {
       if(show){
         $('.buy-block').addClass("active");
