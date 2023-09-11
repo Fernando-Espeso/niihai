@@ -1036,7 +1036,8 @@ footer:hover .hide{
   padding-bottom: 10px;
 }
 .buy-block.active {
-display: none;
+opacity: 0;
+pointer-events: none;
 }
 #related .product{
 grid-column: span 3;
