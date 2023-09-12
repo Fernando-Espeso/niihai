@@ -1094,7 +1094,7 @@ grid-column: span 3;
   position: fixed;
   top: 50%;
   animation: blinking 1s infinite;
-  animation-iteration-count: 3;
+  animation-iteration-count: infinite;
   color: black;
   z-index: 100;
   left: 50%;
