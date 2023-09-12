@@ -1081,7 +1081,17 @@ grid-column: span 3;
   display: block;
   position: absolute;
 }
-
+.middle-bar {
+  width: 100vw;
+  padding: 5px;
+  background-color: red;
+  color:white;
+  position: fixed;
+  top: 50%;
+  z-index: 100;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .total {
   position: sticky;
   top: 29px;
