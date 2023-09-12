@@ -1,7 +1,18 @@
 <div id="main-collection" class="main">
     {% section 'hero' %}
-    
+
     {% for product in collections.top.products limit:  4 %}
          {% include 'product-body' %}
     {% endfor %}
 </div>
+<style>
+.categories {
+  display: block;
+  z-index: 102;
+  position: fixed;
+  top: 29px;
+  width: 200px;
+  text-transform: uppercase;
+}
+
+</style>
