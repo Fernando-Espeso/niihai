@@ -1,6 +1,7 @@
 <div id="main-collection" class="main">
     {% section 'hero' %}
-    {% for product in collections.top.products limit:  1 %}
+    
+    {% for product in collections.top.products limit:  4 %}
          {% include 'product-body' %}
     {% endfor %}
 </div>
