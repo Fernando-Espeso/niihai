@@ -1219,6 +1219,17 @@ grid-column: span 3;
 
 /* Small tablet styles */
 @media (max-width: 600px) {
+
+  .cart-part {
+      position: absolute;
+      z-index: 101;
+      top: 0;
+      width: 25%;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+  }
+
   #related .product {
     grid-column: span 12;
 }
@@ -1313,6 +1324,7 @@ display: grid;
 #related .thumbnail{
   width: 50%;
 }
+
 }
 
 /* Mobile styles */
