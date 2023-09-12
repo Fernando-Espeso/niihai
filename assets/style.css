@@ -1083,9 +1083,9 @@ grid-column: span 3;
 }
 .middle-bar {
   margin-left: 5px;
+    width: calc(100vw - 10px);
   padding-bottom: 2px;
   padding-top: 5px;
-  width: calc(100vw - 10px);
   position: fixed;
   background-color: white;
   left: 50%;
