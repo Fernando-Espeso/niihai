@@ -1082,11 +1082,10 @@ grid-column: span 3;
   position: absolute;
 }
 .middle-bar {
-  padding-left: 5px;
-  padding-right: 5px;
+  margin-left: 5px;
   padding-bottom: 2px;
   padding-top: 5px;
-  width: 100vw;
+  width: calc(100vw - 10px);
   position: fixed;
   background-color: white;
   left: 50%;
