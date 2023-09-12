@@ -442,7 +442,7 @@ grid-template-columns: repeat(5, 1fr);
   position: absolute;
   z-index: 101;
   top: 0px;
-  width: 128px;
+  width: 124px;
   right:0px;
   display: flex;
   justify-content: space-between;
