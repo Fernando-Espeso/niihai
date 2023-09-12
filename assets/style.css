@@ -1082,22 +1082,18 @@ grid-column: span 3;
   position: absolute;
 }
 .middle-bar {
-  padding: 2px;
+  padding-bottom: 2px;
+  padding-top: 5px;
   width: 100vw;
   position: fixed;
   background-color: white;
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
-
-
-  
 }
 .middle-bar a{
   text-align: center;
-  padding-bottom: 2px;
-  padding-top: 5px;
-  color: black;
+  display: block;
   animation: blinking 1s infinite;
   animation-iteration-count: infinite;
   color: black;
