@@ -1089,6 +1089,9 @@ grid-column: span 3;
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
+
+
+  
 }
 .middle-bar a{
   text-align: center;
