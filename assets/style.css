@@ -1083,13 +1083,13 @@ grid-column: span 3;
 }
 .middle-bar {
   padding: 2px;
+  width: 100vw;
+  background-color: white;
 }
 .middle-bar a{
-  width: 100vw;
   text-align: center;
   padding-bottom: 2px;
   padding-top: 5px;
-  background-color: white;
   color: black;
   position: fixed;
   top: 50%;
