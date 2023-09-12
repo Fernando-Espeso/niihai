@@ -1082,6 +1082,9 @@ grid-column: span 3;
   position: absolute;
 }
 .middle-bar {
+  padding: 2px;
+}
+.middle-bar a{
   width: 100vw;
   text-align: center;
   padding-bottom: 2px;
@@ -1093,11 +1096,6 @@ grid-column: span 3;
   z-index: 100;
   left: 50%;
   transform: translate(-50%,-50%);
-}
-.middle-bar a{
-  text-align: center;
-  width: 100%;
-  padding: 2px;
 }
 .total {
   position: sticky;
