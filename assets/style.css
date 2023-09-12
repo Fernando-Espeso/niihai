@@ -1092,6 +1092,11 @@ grid-column: span 3;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.middle-bar a{
+  text-align: center;
+  width: 100%;
+  padding: 2px;
+}
 .total {
   position: sticky;
   top: 29px;
