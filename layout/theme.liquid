@@ -90,6 +90,7 @@ fernandoepeso.info
         <div class="brand">NIIHAI</div>
       </div>
       <div class="cart-part">
+        <a href="/cart" class="cov"></a>
         {% for link in linklists.top-bar.links %}
           <li class="nain" {% if link.active %}class="active"{% endif %}><a href="{{ link.url }}">{{ link.title }}</a></li>
         {% endfor %}

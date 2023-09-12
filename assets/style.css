@@ -1074,6 +1074,14 @@ grid-column: span 3;
   grid-template-columns: repeat(2, 1fr);
   background-color: var(--light);
 }
+.cov{
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+}
+
 .total {
   position: sticky;
   top: 29px;
