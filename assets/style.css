@@ -1320,7 +1320,8 @@ input{
 }
 
 .product-sizes {
-    bottom: 23px;
+    bottom: 24px;
+    padding-top: 6px;
 }
 
 .product-price {
