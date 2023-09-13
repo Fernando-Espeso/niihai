@@ -1266,6 +1266,9 @@ grid-column: span 3;
   font-family: 'Univers LT Std'!important;
   font-size: 12px!important;
 }
+button#add-to-bag {
+  font-family: 'Univers LT Std'!important;
+}
 input{
   font-family: 'Univers LT Std'!important;
   font-size: 12px!important;
