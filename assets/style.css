@@ -1256,8 +1256,12 @@ grid-column: span 3;
     font-size: 12px;
     font-family: 'Univers LT Std';
   }
-input, button{
-  font-family: 'Univers LT Std';
+ button{
+  font-family: 'Univers LT Std'!important;
+  font-size: 12px!important;
+}
+input{
+  font-family: 'Univers LT Std'!important;
   font-size: 12px!important;
 }
   .cart-part {
