@@ -20,7 +20,7 @@
  		});
    };
  });
- 
+
  //height on Iphone
  document.addEventListener('DOMContentLoaded', function(){
    var w = window.innerWidth,
