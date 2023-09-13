@@ -1318,6 +1318,9 @@ input{
   left: auto;
   right: 5px;
 }
+.page_title_size {
+    width: 100%;
+}
   .cart-part {
     position: absolute;
     z-index: 101;
