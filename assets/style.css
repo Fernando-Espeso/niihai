@@ -482,7 +482,9 @@ details > summary {
 details > summary::-webkit-details-marker {
   display: none;
 }
-
+#HI{
+  margin-top: 24px;
+}
 .desplegable{
   width: 500px;
   margin: 0 auto;
@@ -1097,7 +1099,6 @@ grid-column: span 3;
   animation: blinking 1s infinite;
   animation-iteration-count: infinite;
   color: black;
-
 }
 .total {
   position: sticky;
