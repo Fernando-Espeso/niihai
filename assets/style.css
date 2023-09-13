@@ -1282,6 +1282,10 @@ grid-column: span 3;
     background-color: var(--light);
     padding: 6px 5px 2px;
 }
+.brand-links>li {
+    background-color: var(--light);
+    padding: 6px 5px 2px;
+}
  button{
    font-weight: 100;
   font-family: 'Univers LT Std'!important;
