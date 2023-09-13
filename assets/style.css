@@ -1321,6 +1321,10 @@ input{
 .page_title_size {
     width: 100%;
 }
+.column-sizing {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
   .cart-part {
     position: absolute;
     z-index: 101;
