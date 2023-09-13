@@ -382,7 +382,7 @@ div#shopify-section-hero img{
   width:200px; margin-left:200px;
 }
 .brand-links {
-  z-index: 10;
+  z-index: 120;
   position: fixed;
   left: 50%;
   transform: translate(-50%, 0);
@@ -1320,10 +1320,10 @@ grid-column: span 3;
     grid-column: span 12;
 }
 .brand-links{
-  top: 29px;
+ top: 29px;
  left: calc(50% + 0px);
-transform: none;
-  width: calc(50% - 5px);
+ transform: none;
+ width: calc(50% - 5px);
 }
 .categories{
   top: 48px;
