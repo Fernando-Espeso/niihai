@@ -1268,6 +1268,9 @@ grid-column: span 3;
   .row {
     padding: 6px 5px 2px 5px;
 }
+.menu-title{
+      padding: 6px 5px 2px 5px;
+}
 .cart-part li {
     width: 100%;
     padding: 6px 5px 2px!important;;
