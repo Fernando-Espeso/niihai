@@ -1312,7 +1312,11 @@ input{
   .search{
     padding-top: 6px;
     top:calc(var(--m) + 10px);
+    position: fixed;
+    width: calc(50% - 5px);
+    background-color: var(--darker);
   }
+
   .brand-links {
     top: 33px!important;
 }
@@ -1418,12 +1422,7 @@ height: fit-content;
 grid-template-columns: repeat(2,1fr);
 display: grid;
 }
-.search {
-    top: 29px;
-    position: fixed;
-  width: calc(50% - 5px);
-    background-color: var(--darker);
-}
+
 #related .thumbnail{
   width: 50%;
 }
