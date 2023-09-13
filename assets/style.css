@@ -1268,6 +1268,7 @@ input{
     position: fixed!important;
     top: 18px!important;
     left: auto;
+    right:5px;
 }
   .cart-part {
     position: absolute;
