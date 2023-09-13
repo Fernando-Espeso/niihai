@@ -1264,6 +1264,11 @@ input{
   font-family: 'Univers LT Std'!important;
   font-size: 12px!important;
 }
+.left {
+    position: fixed!important;
+    top: 18px!important;
+    left: 5px;
+}
   .cart-part {
     position: absolute;
     z-index: 101;
