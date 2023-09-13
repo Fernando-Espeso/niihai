@@ -1318,10 +1318,10 @@ input{
   }
 
   .brand-links {
-    top: 33px!important;
-}
+    top:calc(var(--m) + 10px);
+  }
 .categories {
-    top: 54px!important;
+    top:calc(var(--m) * 2 + 10px);
 }
   #related .product {
     grid-column: span 12;
@@ -1397,7 +1397,6 @@ input{
  width: calc(50% - 5px);
 }
 .categories{
-  top: 48px;
   width: calc(50% - 5px)!important;
 }
 .menu-title {
