@@ -1280,6 +1280,10 @@ input, button{
     grid-column: span 12;
 }
 
+.product-sizes {
+    bottom: 22px;
+}
+
 .product-price {
   right: 5px;
 }
