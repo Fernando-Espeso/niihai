@@ -1313,7 +1313,7 @@ input{
 }
 .left {
     position: fixed!important;
-    top: 8px!important;
+    top:calc(var(--m) + 10px);
     left: auto;
     right:5px;
 }
