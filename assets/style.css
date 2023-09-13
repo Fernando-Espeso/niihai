@@ -1268,10 +1268,10 @@ input, button{
     justify-content: space-between;
   }
   .search{
-        top: 32px!important;
+        top: 33px!important;
   }
   .brand-links {
-    top: 32px!important;
+    top: 33px!important;
 }
 .categories {
     top: 54px!important;
@@ -1281,7 +1281,7 @@ input, button{
 }
 
 .product-sizes {
-    bottom: 22px;
+    bottom: 23px;
 }
 
 .product-price {
