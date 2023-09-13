@@ -1394,7 +1394,7 @@ input{
 }
 .categories{
   top: 48px;
-  width: calc(50% - 5px);
+  width: calc(50% - 5px)!important;
 }
 .menu-title {
     margin-top: 24px;
