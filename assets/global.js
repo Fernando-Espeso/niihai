@@ -1,6 +1,28 @@
 /*
  * Global Scripts
  */
+
+ //height on Iphone
+ document.addEventListener('DOMContentLoaded', function(){
+   var w = window.innerWidth,
+   h = window.innerHeight;
+   document.documentElement.style.setProperty('--h', h + 'px');
+
+   m = document.getElementById("menu").offsetHeight;
+   document.documentElement.style.setProperty('--m', m + 'px');
+ });
+
+ //height on Resize
+ window.addEventListener("resize", onResizeFunction);
+ function onResizeFunction (e){
+   var w = window.innerWidth,
+   h = window.innerHeight;
+   document.documentElement.style.setProperty('--h', h + 'px');
+
+   m = document.getElementById("menu").offsetHeight;
+   document.documentElement.style.setProperty('--m', m + 'px');
+ }
+
 //Lazy Loading for images
 document.addEventListener("DOMContentLoaded", function(){
   var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
@@ -20,26 +42,7 @@ document.addEventListener("DOMContentLoaded", function(){
     });
   }
 
-  //height on Iphone
-  document.addEventListener('DOMContentLoaded', function(){
-  	var w = window.innerWidth,
-  	h = window.innerHeight;
-  	document.documentElement.style.setProperty('--h', h + 'px');
 
-  	m = document.getElementById("menu").offsetHeight;
-  	document.documentElement.style.setProperty('--m', m + 'px');
-  });
-
-  //height on Resize
-  window.addEventListener("resize", onResizeFunction);
-  function onResizeFunction (e){
-  	var w = window.innerWidth,
-  	h = window.innerHeight;
-  	document.documentElement.style.setProperty('--h', h + 'px');
-
-  	m = document.getElementById("menu").offsetHeight;
-  	document.documentElement.style.setProperty('--m', m + 'px');
-  }
 
 
 
