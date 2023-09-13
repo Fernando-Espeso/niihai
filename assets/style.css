@@ -1318,10 +1318,10 @@ input{
   }
 
   .brand-links {
+    top:calc(var(--m) + 10px);
     left: calc(50% + 0px);
     transform: none;
     width: calc(50% - 5px);
-    top:calc(var(--m) + 10px);
   }
 .categories {
     top:calc(var(--m) * 2 + 10px);
