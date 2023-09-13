@@ -1268,13 +1268,13 @@ input, button{
     justify-content: space-between;
   }
   .search{
-        top: 32px;
+        top: 32px!important;
   }
   .brand-links {
-    top: 32px;
+    top: 32px!important;
 }
 .categories {
-    top: 54px;
+    top: 54px!important;
 }
   #related .product {
     grid-column: span 12;
