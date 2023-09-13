@@ -1262,6 +1262,19 @@ grid-column: span 3;
     font-size: 12px!important;
     font-family: 'Univers LT Std';
   }
+  .total>div{padding: 6px 5px 2px;}
+  .menu>div{padding: 6px 5px 2px;}
+  .siz { padding: 6px 5px 2px;}
+  .row {
+    padding: 6px 5px 2px 5px;
+}
+.main_page {
+    margin-top: 28px;
+}
+.desplegable summary {
+    background-color: var(--light);
+    padding: 6px 5px 2px;
+}
  button{
    font-weight: 100;
   font-family: 'Univers LT Std'!important;
