@@ -1386,7 +1386,7 @@ input{
   }
   .buy-block {
       position: sticky;
-      top:calc(var(--m) * 3 + 10px);
+      margin-top: calc(var(--m) * 2 + 5px);
       display: block!important;
       opacity: 1!important;
       order: 0;
