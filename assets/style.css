@@ -1306,6 +1306,7 @@ input{
     justify-content: space-between;
   }
   .search{
+    padding-top: 6px;
         top: 33px!important;
   }
   .brand-links {
