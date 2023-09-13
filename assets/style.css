@@ -1267,7 +1267,7 @@ input{
 .left {
     position: fixed!important;
     top: 18px!important;
-    left: 5px;
+    left: auto;
 }
   .cart-part {
     position: absolute;
