@@ -1268,6 +1268,9 @@ grid-column: span 3;
   .row {
     padding: 6px 5px 2px 5px;
 }
+.page_title {
+    padding: 6px 5px 2px;
+}
 .main_page {
     margin-top: 28px;
 }
