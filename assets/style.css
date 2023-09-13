@@ -1286,6 +1286,16 @@ grid-column: span 3;
     background-color: var(--light);
     padding: 6px 5px 2px;
 }
+.onsale {
+    right: 5px;
+    bottom: 26px;
+    color: #000;
+}
+.sold {
+    right: 5px;
+    bottom: 26px;
+    color: #000;
+}
  button{
    font-weight: 100;
   font-family: 'Univers LT Std'!important;
