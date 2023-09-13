@@ -1267,7 +1267,8 @@ input, button{
     display: flex;
     justify-content: space-between;
   }
-  .search, .brand-links {
+  .search,
+  .brand-links {
     top: 32px;
 }
 .categories {
