@@ -604,6 +604,9 @@ details > summary::-webkit-details-marker {
   background-color: black;
   color: var(--sold);
 }
+.product.sold .product-title{
+  text-decoration: line-through;
+}
 .bag.sold .row {
   position: relative;
   background-color: black;
