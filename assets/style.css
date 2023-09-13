@@ -1254,9 +1254,12 @@ grid-column: span 3;
   .desplegable summary{
     font-size: 12px!important;
   }
+  *{
+  font-size: 12px!important;
+  }
   body {
     padding: 5px;
-    font-size: 12px;
+    font-size: 12px!important;
     font-family: 'Univers LT Std';
   }
  button{
