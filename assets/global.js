@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	       lazyImageObserver.observe(lazyImage);
 		});
   };
-});
+})
 
 $('#related .main>.product:gt(3)').remove();
 
