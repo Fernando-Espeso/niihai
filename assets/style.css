@@ -193,6 +193,7 @@ select {
 }
 
 * {
+  font-family: 'Univers LT Std';
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
 }
@@ -1256,6 +1257,7 @@ grid-column: span 3;
     font-family: 'Univers LT Std';
   }
 input, button{
+  font-family: 'Univers LT Std';
   font-size: 12px!important;
 }
   .cart-part {
