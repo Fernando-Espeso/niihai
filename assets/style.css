@@ -1353,7 +1353,7 @@ input{
   right: 5px;
 }
 .cartie{
-  width: calc(100% - 10px);
+  width: calc(100% - 10px)!important;
 }
 .product_gallery_second {
   grid-template-columns: repeat(2, 1fr);
