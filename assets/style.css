@@ -1339,6 +1339,7 @@ grid-column: span 3;
 top: 48px;
 z-index: 10;
 padding: 0;
+width: 100%;
 grid-column: span 12;
 background: var(--light);
 height: fit-content;
