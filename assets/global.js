@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
   	m = document.getElementById("menu").offsetHeight;
   	document.documentElement.style.setProperty('--m', m + 'px');
-
   });
 
   //height on Resize
@@ -40,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
   	m = document.getElementById("menu").offsetHeight;
   	document.documentElement.style.setProperty('--m', m + 'px');
-
   }
 
 
