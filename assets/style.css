@@ -1253,11 +1253,10 @@ grid-column: span 3;
   body {
     padding: 5px;
     font-size: 12px;
-    
     font-family: 'Univers LT Std';
   }
-input{
-  font-size: 12px;
+input, button{
+  font-size: 12px!important;
 }
   .cart-part {
     position: absolute;
