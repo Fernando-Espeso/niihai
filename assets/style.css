@@ -1105,7 +1105,7 @@ grid-column: span 3;
   color: black;
 }
 .total {
-
+  position: sticky;
   top: 29px;
   z-index: 10;
   padding: 0px;
@@ -1271,6 +1271,9 @@ grid-column: span 3;
 .menu-title{
       padding: 6px 5px 2px 5px;
 }
+#cart-wrapper {
+    margin-top: calc(var(--m) * 2 + 5px);
+  }
 .cart-part li {
     width: 100%;
     padding: 6px 5px 2px!important;;
@@ -1299,9 +1302,6 @@ grid-column: span 3;
     bottom: 26px;
     color: #000;
 }
-#cart-wrapper {
-    margin-top: calc(var(--m) * 2 + 5px);
-  }
  button{
    font-weight: 100;
   font-family: 'Univers LT Std'!important;
@@ -1328,6 +1328,7 @@ input{
     display: grid;
     grid-template-columns: repeat(3,1fr);
 }
+
   .cart-part {
     position: absolute;
     z-index: 101;
@@ -1439,7 +1440,8 @@ label{
       font-size: 12px!important;
 }
 .total{
-  position: inherit;
+  position: sticky;
+top: 54px;
 z-index: 10;
 padding: 0;
 width: 100%;
