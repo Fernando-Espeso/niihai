@@ -1108,6 +1108,7 @@ grid-column: span 3;
   top: 29px;
   z-index: 10;
   padding: 0px;
+  width:500px;
   grid-column: 9/span 4;
   background: var(--light);
   height: fit-content;
