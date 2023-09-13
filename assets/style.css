@@ -1318,6 +1318,9 @@ input{
   }
 
   .brand-links {
+    left: calc(50% + 0px);
+    transform: none;
+    width: calc(50% - 5px);
     top:calc(var(--m) + 10px);
   }
 .categories {
@@ -1390,12 +1393,7 @@ input{
     grid-template-columns: repeat(1,1fr);
     grid-column: span 12;
 }
-.brand-links{
- top: 29px;
- left: calc(50% + 0px);
- transform: none;
- width: calc(50% - 5px);
-}
+
 .categories{
   width: calc(50% - 5px)!important;
 }
