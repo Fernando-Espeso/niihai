@@ -1338,7 +1338,7 @@ input{
     width: calc(50% - 5px);
   }
 .categories {
-    top:calc(var(--m) * 2 + 10px);
+    top:calc(var(--m) * 2 + 10px)!important;
 }
   #related .product {
     grid-column: span 12;
