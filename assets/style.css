@@ -1272,6 +1272,9 @@ input, button{
     grid-column: span 12;
 }
 
+.product-price {
+  right: 5px;
+}
 .product_gallery_second {
   grid-template-columns: repeat(2, 1fr);
   grid-column: span 12;
