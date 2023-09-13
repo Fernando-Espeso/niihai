@@ -1352,6 +1352,9 @@ input{
 .product-price {
   right: 5px;
 }
+.cartie{
+  width: calc(100% - 10px);
+}
 .product_gallery_second {
   grid-template-columns: repeat(2, 1fr);
   grid-column: span 12;
