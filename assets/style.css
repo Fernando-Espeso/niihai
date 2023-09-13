@@ -1267,7 +1267,12 @@ input, button{
     display: flex;
     justify-content: space-between;
   }
-
+  .search, .brand-links {
+    top: 32px;
+}
+.categories {
+    top: 54px;
+}
   #related .product {
     grid-column: span 12;
 }
