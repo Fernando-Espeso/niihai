@@ -1352,7 +1352,12 @@ input, button{
     margin-top: 24px;
     width: calc(50% - 5px);
 }
-
+.variations #add-to-bag {
+    font-size: 12px!important;
+}
+label{
+      font-size: 12px!important;
+}
 .total{
   position: sticky;
 top: 48px;
