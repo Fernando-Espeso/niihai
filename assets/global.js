@@ -1,46 +1,25 @@
 /*
  * Global Scripts
  */
- //Lazy Loading for images
- document.addEventListener("DOMContentLoaded", function() {
-   var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
- 	if ("IntersectionObserver" in window) {
- 		let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
- 			entries.forEach(function(entry) {
- 				if (entry.isIntersecting) {
- 					let lazyImage = entry.target;
- 					lazyImage.src = lazyImage.dataset.src;
- 					lazyImage.classList.remove("lazy");
- 					lazyImageObserver.unobserve(lazyImage);
- 	   			}
- 	 		    });
-     });
- 		lazyImages.forEach(function(lazyImage) {
- 	       lazyImageObserver.observe(lazyImage);
- 		});
-   };
- });
+//Lazy Loading for images
+document.addEventListener("DOMContentLoaded", function(){
+  var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+  if("IntersectionObserver" in window){
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target;
+          lazyImage.src = lazyImage.dataset.src;
+          lazyImage.classList.remove("lazy");
+          lazyImageObserver.unobserve(lazyImage);
+        }
+      });
+    });
+    lazyImages.forEach(function(lazyImage){
+      lazyImageObserver.observe(lazyImage);
+    });
+  }
 
- //height on Iphone
- document.addEventListener('DOMContentLoaded', function(){
-   var w = window.innerWidth,
-   h = window.innerHeight;
-   document.documentElement.style.setProperty('--h', h + 'px');
-
-   m = document.getElementById("menu").offsetHeight;
-   document.documentElement.style.setProperty('--m', m + 'px');
- });
-
- //height on Resize
- window.addEventListener("resize", onResizeFunction);
- function onResizeFunction (e){
-   var w = window.innerWidth,
-   h = window.innerHeight;
-   document.documentElement.style.setProperty('--h', h + 'px');
-
-   m = document.getElementById("menu").offsetHeight;
-   document.documentElement.style.setProperty('--m', m + 'px');
- }
 
 
 $('#related .main>.product:gt(3)').remove();
@@ -174,3 +153,26 @@ $(document).scroll(function () {
           showScreenSaver();
         }
       }, 1000); // Check every second
+
+
+
+      //height on Iphone
+      document.addEventListener('DOMContentLoaded', function(){
+      	var w = window.innerWidth,
+      	h = window.innerHeight;
+      	document.documentElement.style.setProperty('--h', h + 'px');
+
+      	m = document.getElementById("menu").offsetHeight;
+      	document.documentElement.style.setProperty('--m', m + 'px');
+      });
+
+      //height on Resize
+      window.addEventListener("resize", onResizeFunction);
+      function onResizeFunction (e){
+      	var w = window.innerWidth,
+      	h = window.innerHeight;
+      	document.documentElement.style.setProperty('--h', h + 'px');
+
+      	m = document.getElementById("menu").offsetHeight;
+      	document.documentElement.style.setProperty('--m', m + 'px');
+      }
