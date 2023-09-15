@@ -1115,6 +1115,7 @@ grid-column: span 3;
   height: fit-content;
   grid-template-columns: repeat(2,1fr);
   display: grid;
+      margin-bottom: calc(var(--m) + 5px);
 }
 .total > div{
   padding: 5px;
@@ -1144,7 +1145,9 @@ grid-column: span 3;
   align-self: center;
   cursor: pointer;
   height: fit-content;
-  background: #deded9;
+}
+.quantity-button:hover {
+    background-color: var(--darker);
 }
 .related-title {
     background-color: var(--light);
