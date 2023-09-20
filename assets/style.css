@@ -690,17 +690,18 @@ details > summary::-webkit-details-marker {
 }
 
 .product-sizes {
-  color: white;
-  background-color: black;
-  bottom: 19px;
-  left: 0px;
-  padding: 5px;
-  padding-bottom: 2px;
-  width: auto;
-  position: absolute;
-  display: flex;
-  gap: 5px;
-  align-items: center;
+  width: 124px;
+      color: #fff;
+      background-color: #000;
+      bottom: 19px;
+      left: 0;
+      padding: 5px 5px 2px;
+      /* width: auto; */
+      position: absolute;
+      display: flex;
+      gap: 5px;
+      justify-content: space-between;
+      align-items: center;
 }
 
 .filters_shop {
@@ -1238,9 +1239,16 @@ grid-column: span 3;
 /* Mobile card styles */
 @media (max-width: 812px) and (orientation: landscape) {
 }
-
+@media only screen and (max-width:3920px) and (min-width:1540px){
+  .product {
+      position: relative;
+      height: fit-content;
+      display: grid;
+      grid-column: span 3;
+  }
+}
 /* Mobile landscape styles */
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   /* PRODUCTS */
   .product{
     grid-column: span 6;
@@ -1254,7 +1262,10 @@ grid-column: span 3;
 
 /* Small tablet styles */
 @media (max-width: 600px) {
-
+  .thumbnail img {
+      margin-bottom: 24px;
+      width: 100%;
+  }
   .desplegable summary{
     font-size: 12px!important;
   }

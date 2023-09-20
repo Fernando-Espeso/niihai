@@ -1,0 +1,109 @@
+<section
+  data-section-id="desplegable"
+  id="desplegable"
+  class="desplegable"
+>
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'text' %}
+          <div data-section="" id="block-{{ block.id }}" class="ask">
+            {% unless block.settings.title == blank %}
+              <div class="title-seccion">{{ block.settings.title }}</div>
+            {% endunless %}
+          </div>
+        {% when 'summary' %}
+        {% unless block.settings.subtitle and block.settings.interior  == blank %}
+          <details>
+            <summary>{{ block.settings.subtitle }}</summary>
+            <div class="interior">{{ block.settings.interior }}</div>
+          </details>
+        {% endunless %}
+    {% endcase %}
+    {% case block.type %}
+      {% when 'media' %}
+        <div id="block-{{ block.id }}" class="hero__image">
+          {% unless block.settings.image == blank %}
+            {{ block.settings.image | image_url: width: block.settings.image.width | image_tag:
+              loading: 'lazy',
+              alt: block.settings.image.alt,
+              class: ''
+            }}
+          {% endunless %}
+        </div>
+       {% unless block.settings.heading == blank and block.settings.button_label == blank %}
+        <div class="bar">
+          {% unless block.settings.button_link == blank %}
+            <a class="" href="{{ block.settings.button_link }}" alt="{{ block.settings.button_label }}">
+          {% endunless %}
+              <div class="bar-content">
+                <div>
+                  {% unless block.settings.heading == blank %}
+                    {{ block.settings.heading }}
+                  {% endunless %}
+                </div>
+                <div class="mobile-hidden">
+                  {% unless block.settings.button_label == blank %}
+                    <a class="btn" href="{{ block.settings.button_link }}" alt="{{ block.settings.button_label }}">{{ block.settings.button_label }}</a>
+                  {% endunless %}
+                </div>
+              </div>
+          </div>
+          {% endunless %}
+    {% endcase %}
+  {% endfor %}
+</section>
+
+
+{% schema %}
+{
+  "name": "gallery",
+  "blocks": [
+    {
+      "type": "media",
+      "name": "Media",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "Used as poster image when video is provided"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Title",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Title"
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "name": "Section",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "subtitle",
+          "label": "Subtitle"
+        },
+        {
+          "type": "richtext",
+          "id": "interior",
+          "label": "Interior"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Gallery",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}
