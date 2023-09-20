@@ -203,6 +203,12 @@
               "interior": "<p>INFORMACION <\/p>"
             }
           },
+          "516b9281-358a-435f-aa75-025aa8ad51e5": {
+            "type": "text",
+            "settings": {
+              "title": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas, purus cursus lobortis finibus, quam lorem sodales diam, ut ultrices dolor ex id velit. Donec commodo tortor sit amet libero blandit volutpat. Maecenas aliquet ullamcorper viverra. Sed elementum elit et porta convallis. Sed in ex nulla. Aliquam accumsan odio in ligula cursus scelerisque. Sed condimentum risus diam, eu dignissim velit cursus a. Suspendisse vulputate ex bibendum neque vestibulum sollicitudin. Aenean libero odio, aliquet id bibendum a, tincidunt at lacus. Donec mattis nisi scelerisque interdum pulvinar. Nam dolor turpis, rutrum eu scelerisque vitae, viverra eu sapien. Sed gravida pulvinar feugiat. Praesent rutrum quam a velit ultricies, lobortis tincidunt orci varius. Nam ultricies sem nec urna posuere, a tincidunt mauris volutpat.<\/p>"
+            }
+          },
           "6eb8d0d4-4b49-4643-bafc-13666679a924": {
             "type": "summary",
             "settings": {
@@ -215,19 +221,13 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/Screenshot_2023-09-12_at_18.28.28.png"
             }
-          },
-          "516b9281-358a-435f-aa75-025aa8ad51e5": {
-            "type": "text",
-            "settings": {
-              "title": "<p>TEXTO ABIERTO LONG<\/p>"
-            }
           }
         },
         "block_order": [
           "8698c85b-e995-47e6-a28f-b0dab82714c5",
+          "516b9281-358a-435f-aa75-025aa8ad51e5",
           "6eb8d0d4-4b49-4643-bafc-13666679a924",
-          "56840094-84fa-483a-9044-6f581a525b6d",
-          "516b9281-358a-435f-aa75-025aa8ad51e5"
+          "56840094-84fa-483a-9044-6f581a525b6d"
         ],
         "settings": {
         }
