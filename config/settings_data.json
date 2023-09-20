@@ -202,10 +202,25 @@
               "subtitle": "<p>TITULO DE LA SECCION<\/p>",
               "interior": "<p>INFORMACION <\/p>"
             }
+          },
+          "6eb8d0d4-4b49-4643-bafc-13666679a924": {
+            "type": "summary",
+            "settings": {
+              "subtitle": "<p>CONSEGUIR UN APPOINTMENT<\/p>",
+              "interior": "<p>ENVIAR EMAIL A: <\/p>"
+            }
+          },
+          "56840094-84fa-483a-9044-6f581a525b6d": {
+            "type": "media",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Screenshot_2023-09-12_at_18.28.28.png"
+            }
           }
         },
         "block_order": [
-          "8698c85b-e995-47e6-a28f-b0dab82714c5"
+          "8698c85b-e995-47e6-a28f-b0dab82714c5",
+          "6eb8d0d4-4b49-4643-bafc-13666679a924",
+          "56840094-84fa-483a-9044-6f581a525b6d"
         ],
         "settings": {
         }
