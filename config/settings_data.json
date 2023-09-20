@@ -215,12 +215,19 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/Screenshot_2023-09-12_at_18.28.28.png"
             }
+          },
+          "42e51f47-c2cd-430a-a5c5-de51d2f391d5": {
+            "type": "text",
+            "settings": {
+              "title": "<p>INFORMACION SOBRE LA FOTO<\/p>"
+            }
           }
         },
         "block_order": [
           "8698c85b-e995-47e6-a28f-b0dab82714c5",
           "6eb8d0d4-4b49-4643-bafc-13666679a924",
-          "56840094-84fa-483a-9044-6f581a525b6d"
+          "56840094-84fa-483a-9044-6f581a525b6d",
+          "42e51f47-c2cd-430a-a5c5-de51d2f391d5"
         ],
         "settings": {
         }
