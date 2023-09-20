@@ -215,12 +215,19 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/Screenshot_2023-09-12_at_18.28.28.png"
             }
+          },
+          "516b9281-358a-435f-aa75-025aa8ad51e5": {
+            "type": "text",
+            "settings": {
+              "title": "<p>TEXTO ABIERTO LONG<\/p>"
+            }
           }
         },
         "block_order": [
           "8698c85b-e995-47e6-a28f-b0dab82714c5",
           "6eb8d0d4-4b49-4643-bafc-13666679a924",
-          "56840094-84fa-483a-9044-6f581a525b6d"
+          "56840094-84fa-483a-9044-6f581a525b6d",
+          "516b9281-358a-435f-aa75-025aa8ad51e5"
         ],
         "settings": {
         }
