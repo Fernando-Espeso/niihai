@@ -192,6 +192,23 @@
         ],
         "settings": {
         }
+      },
+      "appointments": {
+        "type": "appointments",
+        "blocks": {
+          "8698c85b-e995-47e6-a28f-b0dab82714c5": {
+            "type": "summary",
+            "settings": {
+              "subtitle": "<p>TITULO DE LA SECCION<\/p>",
+              "interior": "<p>INFORMACION <\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "8698c85b-e995-47e6-a28f-b0dab82714c5"
+        ],
+        "settings": {
+        }
       }
     },
     "content_for_index": [
