@@ -936,7 +936,7 @@ padding-bottom: 2px;
 .product-variant-option.unavailable .option-value,
 .product-variant-option.unavailable .color-option {
   opacity: 1;
-  background-color: black!important;
+    background-color: var(--light);
   height: 40px;
   padding: 5px;
 }
@@ -974,7 +974,8 @@ transform: translate(-50%, -50%);
   height: 40px;
   text-align: left;
   padding: 5px;
-  background-color: var(--darker)!important;
+  color: white;
+  background-color: black;
 }
 
 .product-variant-option[open]:not(.unavailable) .color-option {
@@ -1006,9 +1007,7 @@ transform: translate(-50%, -50%);
   width: 100%;
 }
 
-.variations #add-to-bag:hover {
-  background: yellow;
-}
+
 
 .info-size {
   padding: 5px;
@@ -1528,6 +1527,10 @@ display: grid;
 }
 .desplegable {
   display: none;
+}
+.payment {
+    margin-top: 20px;
+    grid-column: span 12!important;
 }
 }
 
