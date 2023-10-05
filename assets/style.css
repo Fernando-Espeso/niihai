@@ -978,7 +978,7 @@ transform: translate(-50%, -50%);
 .variations #add-to-bag {
   font-family: 'Univers LT Std';
   font-size: 10px!important;
-  background: var(--darker);
+  background: yellow;
   height: 40px;
   width: 100%;
 }
