@@ -1,5 +1,13 @@
 {% section 'main-product' %}
 {% include "related" %}
+<!-- <div class="payment">
+<li><span></span> PAYMENT</li>
+<li><span></span> KLARNA</li>
+<li><span></span> PAYPAL</li>
+<li><span></span> TRANSFERWISE</li>
+<li><span></span> STRIBE</li>
+<li><span></span> APPLE PAY</li>
+</div> -->
 {% assign variants = 0 %}
 {% for option in product.options %}
 {% if product.options.first != 'Title' %}

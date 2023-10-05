@@ -26,8 +26,30 @@
 
 /* Sold and sale product styles */
 .product.sold .product-sizes,
-.product.sale .product-sizes {
+.product.sale .product-sizes,
+.product.simple .product-sizes {
   display: none;
+}
+.payment li:first-child{
+background-color: var(--light);
+left: 5px;
+padding: 5px;
+padding-bottom: 2px;
+margin-bottom: 5px;
+
+}
+.payment li:nth-child(even){
+background-color: white;
+}
+.payment{
+  margin-top: 20px;
+  grid-column: 4/span 4;
+}
+.payment li {
+  padding-left: 5px;
+  /* left: 5px;
+  padding: 5px;
+  padding-bottom: 2px; */
 }
 
 /* Selection styles */
@@ -1000,7 +1022,6 @@ transform: translate(-50%, -50%);
 a.size-guide {
   background-color: var(--darker);
       color: black;
-      padding: 5px 5px 2px;
   padding: 5px;
   padding-bottom: 2px;
 }
@@ -1176,8 +1197,11 @@ grid-column: span 3;
   height: fit-content;
   padding: 5px;
   padding-bottom: 2px;
-  background-color: #000;
-  color: var(--light);
+  background-color: var(--light);
+  color: black
+}
+.remove:hover{
+  background-color: var(--darker);
 }
 .quantity-wrap {
   background: white;
@@ -1186,7 +1210,10 @@ grid-column: span 3;
   padding: 5px;
   padding-bottom: 2px;
 }
-
+.desplegable.dos {
+    grid-column: span 12;
+    display: none;
+}
 .item-quantity {
   align-self: end;
   display: flex;
@@ -1194,7 +1221,12 @@ grid-column: span 3;
   height: fit-content;
 }
 
-
+.brand.none{
+  display: none;
+}
+.brand.desktop{
+  display: block;
+}
 /* Video styles */
 
 /* Animation styles */
@@ -1444,7 +1476,7 @@ input{
       /* position: relative; */
       width: calc(100vw - 10px);
       padding: 0;
-      top: auto;
+      top: calc(var(--m) * 2 + 10px);
   }
 .desplegable {
     width: 100%;
@@ -1481,11 +1513,22 @@ height: fit-content;
 grid-template-columns: repeat(2,1fr);
 display: grid;
 }
-
 #related .thumbnail{
   width: 50%;
 }
-
+.brand.none{
+  display: block;
+}
+.brand.desktop{
+  display: none;
+}
+.desplegable.dos {
+    grid-column: span 12;
+    display: block;
+}
+.desplegable {
+  display: none;
+}
 }
 
 /* Mobile styles */

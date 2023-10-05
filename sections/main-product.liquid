@@ -122,6 +122,32 @@
     {% endif %}
     </div>
   </div>
+  <div class="desplegable dos">
+  {% if info != blank %}
+  <details open>
+    <summary>INFO PRODUCT</summary>
+    <div class="interior">
+      {{ product.metafields.custom.info_product }}
+    </div>
+    </details>
+  {% endif %}
+  {% if shipping != blank %}
+  <details>
+    <summary>SHIPPING TIME</summary>
+    <div class="interior">
+      {{ product.metafields.custom.shipping-info }}
+    </div>
+    </details>
+  {% endif %}
+  {% if policies != blank %}
+  <details>
+    <summary>POLCIES</summary>
+    <div class="interior">
+      {{ product.metafields.custom.polcies_info }}
+    </div>
+    </details>
+  {% endif %}
+  </div>
   <!--GALLERY-->
   <div class="product_gallery">
     {% for media in product.media %}

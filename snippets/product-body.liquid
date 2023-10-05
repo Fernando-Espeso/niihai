@@ -26,12 +26,15 @@
 
 <!-- Product -->
 <div id="product-{{ product.id }}" class="product
+    {% if product.has_only_default_variant %}simple{% endif %}
+
     {% if product.available %}{% else %}sold{% endif %}
     {% if product.compare_at_price > product.price %}sale{% else %}{% endif %}
     {% for filter in sizes %}{% unless filter == blank %}filter-size-{{ filter | strip | handle | downcase | escape }} {% endunless %}{% endfor %}
     {% for filter in colors %}{% unless filter == blank %}filter-color-{{ filter | strip | handle | downcase | escape }} {% endunless %}{% endfor %}"
     data-price="{{ product.price }}"
-    data-pos="{{ forloop.index }}">
+    data-pos="{{ forloop.index }}"
+    >
 
   <!-- Product Link -->
   <a class="thumbnail" href="{{ product.url }}">
@@ -123,12 +126,16 @@
           <span>{{ product.price | money }}</span>
         {% endif %}
       </div>
-      <form id="product-actions" action="/cart/add" method="post" enctype="multipart/form-data"
-            {%- if product.has_only_default_variant -%}
-              class="product-simple"
-            {%- elsif variants > 1 -%}
+      <form id="product-actions"
+      action="/cart/add"
+      method="post"
+      enctype="multipart/form-data"
+      {%- if product.has_only_default_variant -%}
+      class="product-simple"
+      {%- elsif variants > 1 -%}
               class="product-variants"
-            {%- endif -%}>
+            {%- endif -%}
+            >
 
         {% if product.compare_at_price > product.price %}
           <div class="onsale">ON SALE</div>

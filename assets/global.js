@@ -37,8 +37,20 @@ $('#add-to-bag').click(function(){
 $('.shop').click(function(){
      $('.categories').toggle();
 });
+// 
+// const elementoSticky = document.getElementById('add-to-bag');
+// const posicionSticky = 200; // La posición en la que se vuelve sticky
+//
+// window.addEventListener('scroll', () => {
+//   if (window.scrollY >= posicionSticky) {
+//     elementoSticky.style.position = 'fixed';
+//     elementoSticky.style.top = '0';
+//   } else {
+//     elementoSticky.style.position = 'static';
+//   }
+// });
 
-$('.brand').click(function(){
+$('.brand.desktop').click(function(){
      $('.brand-links').toggle();
 });
 
