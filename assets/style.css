@@ -188,6 +188,7 @@ div#shopify-section-hero img {
 div#shopify-section-hero-mobile img {
     left: 0px;
     top: 0px;
+    display: none;
     position: fixed;
     width: 100vw;
     height: 100%;
@@ -1270,6 +1271,9 @@ grid-column: span 3;
 
 /* Small tablet styles */
 @media (max-width: 600px) {
+  div#shopify-section-hero-mobile img {
+      display: block;
+  }
 
   .thumbnail img {
       margin-bottom: 24px;
