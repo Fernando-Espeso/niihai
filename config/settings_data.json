@@ -221,20 +221,29 @@
             "settings": {
               "title": "<p>INFORMACION SOBRE LA FOTO<\/p>"
             }
-          },
-          "0cc4fce1-d0b8-4f28-8896-84d029a60ea5": {
-            "type": "media",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Screenshot_2023-07-16_at_02.14.40.png"
-            }
           }
         },
         "block_order": [
           "8698c85b-e995-47e6-a28f-b0dab82714c5",
           "6eb8d0d4-4b49-4643-bafc-13666679a924",
           "56840094-84fa-483a-9044-6f581a525b6d",
-          "42e51f47-c2cd-430a-a5c5-de51d2f391d5",
-          "0cc4fce1-d0b8-4f28-8896-84d029a60ea5"
+          "42e51f47-c2cd-430a-a5c5-de51d2f391d5"
+        ],
+        "settings": {
+        }
+      },
+      "hero-mobile": {
+        "type": "hero-mobile",
+        "blocks": {
+          "a3e23feb-7fb1-4028-856b-494d4bf0ea27": {
+            "type": "media",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Screenshot_2023-09-12_at_18.28.19.png"
+            }
+          }
+        },
+        "block_order": [
+          "a3e23feb-7fb1-4028-856b-494d4bf0ea27"
         ],
         "settings": {
         }
