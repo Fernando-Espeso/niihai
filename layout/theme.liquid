@@ -123,7 +123,7 @@ fernandoepeso.info
       {%- endif -%}
     </div>
     <div class="brand-links">
-      {% for link in linklists.main-menu.links %}
+      {% for link in linklists.menu.links %}
         <li {% if link.active %}class="active"{% endif %}><a class="{{ link.title }}" href="{{ link.url }}">{{ link.title }}</a></li>
       {% endfor %}
     </div>
