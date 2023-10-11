@@ -721,7 +721,8 @@ details > summary::-webkit-details-marker {
 }
 
 .product-sizes {
-  width: 124px;
+  width: auto;
+  min-width: 124px;
       color: #fff;
       background-color: #000;
       bottom: 19px;

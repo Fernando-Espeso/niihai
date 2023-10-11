@@ -100,7 +100,7 @@
     <details open>
       <summary>INFO PRODUCT</summary>
       <div class="interior">
-        {{ product.metafields.custom.info_product }}
+        {{ product.metafields.custom.info_product | metafield_tag }}
       </div>
       </details>
     {% endif %}
@@ -108,7 +108,7 @@
     <details>
       <summary>SHIPPING TIME</summary>
       <div class="interior">
-        {{ product.metafields.custom.shipping-info }}
+        {{ product.metafields.custom.shipping-info | metafield_tag }}
       </div>
       </details>
     {% endif %}
@@ -116,7 +116,7 @@
     <details>
       <summary>POLCIES</summary>
       <div class="interior">
-        {{ product.metafields.custom.polcies_info }}
+        {{ product.metafields.custom.polcies_info | metafield_tag }}
       </div>
       </details>
     {% endif %}
@@ -124,10 +124,10 @@
   </div>
   <div class="desplegable dos">
   {% if info != blank %}
-  <details open>
+  <details>
     <summary>INFO PRODUCT</summary>
     <div class="interior">
-      {{ product.metafields.custom.info_product }}
+      {{ product.metafields.custom.info_product | metafield_tag }}
     </div>
     </details>
   {% endif %}
@@ -135,7 +135,7 @@
   <details>
     <summary>SHIPPING TIME</summary>
     <div class="interior">
-      {{ product.metafields.custom.shipping-info }}
+      {{ product.metafields.custom.shipping-info | metafield_tag }}
     </div>
     </details>
   {% endif %}
@@ -143,7 +143,7 @@
   <details>
     <summary>POLCIES</summary>
     <div class="interior">
-      {{ product.metafields.custom.polcies_info }}
+      {{ product.metafields.custom.polcies_info | metafield_tag }}
     </div>
     </details>
   {% endif %}

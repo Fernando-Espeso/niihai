@@ -111,7 +111,7 @@ fernandoepeso.info
     <div class="categories">
       {% assign current_collection_handle = collection.handle | default: '' %}
       {% assign product_count = collections.all.products_count %}
-      <li {% if request.path == '/collections/all' %}class="active"{% endif %} ><a href="/collections/all">ALL<span> {{ product_count }}</span></a></li>
+      <!-- <li {% if request.path == '/collections/all' %}class="active"{% endif %} ><a href="/collections/all">ALL<span> {{ product_count }}</span></a></li> -->
       {% for collection in collections %}
         <li id="{{ collection.title }}" {% if collection.handle == current_collection_handle %} class="active" {% endif %}>
           <a href="{{ collection.url }}">{{ collection.title }} <span>{{ collection.all_products_count }}</span></a>
