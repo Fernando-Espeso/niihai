@@ -1167,7 +1167,8 @@ grid-column: span 3;
   padding: 10px!important;
   grid-column: span 2;
   width: 100%;
-  background-color: yellow;
+  background-color: black;
+  color: white;
 }
 
 .quantity-button {
