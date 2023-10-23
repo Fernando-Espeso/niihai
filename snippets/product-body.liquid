@@ -33,43 +33,7 @@
     data-pos="{{ forloop.index }}"
     >
 
-  <!-- Product Link -->
   <a class="thumbnail" href="{{ product.url }}">
-    <span class="box"></span>
-    {% unless product.metafields.custom.notice == blank %}
-      <div class="newin" style="z-index:100; text-transform:uppercase;">{{ product.metafields.custom.notice }}</div>
-    {% endunless %}
-    <span class="colors" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
-      {%- for option in product.options_with_values -%}
-        {%- for value in option.values -%}
-          {%- liquid
-            assign optionNumber = 'option' | append: option.position
-            assign optionVariant = false
-            for variant in product.variants
-              if variant[optionNumber] == value
-                assign optionVariant = variant
-                break
-              endif
-            endfor
-          -%}
-          {% if product.variants[forloop.index0].metafields.custom.color and option.name == "Color" %}
-            <span class="{%- if optionVariant.available == false -%} unavailable {%- endif -%}" style="background-color: {{ product.variants[forloop.index0].metafields.custom.color }}">
-              &nbsp;
-            </span>
-          {% endif %}
-        {%- endfor -%}
-      {%- endfor -%}
-      <script type="application/json">
-        {{ product.variants | json }}
-      </script>
-    </span>
-
-    {% for c in product.collections %}
-      {% if c.handle == "new" %}
-        <div class="newin">NEW IN</div>
-      {% endif %}
-    {% endfor %}
-
     {% for media in product.media %}
       {% case media.media_type %}
         {% when 'video' %}
@@ -80,7 +44,6 @@
     {% endfor %}
     <img id="none" class="lazy" src="{{ product.images[0] | product_img_url: 'thumb' }}" data-src="{{ product.images[0] | product_img_url: 'master' }}" alt="{{ product.title }}" />
   </a>
-
   <div class="product-price-wrap">
     {% if product.available %}
       {% if product.price_varies %}
