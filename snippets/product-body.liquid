@@ -27,11 +27,8 @@
 <!-- Product -->
 <div id="product-{{ product.id }}" class="product
     {% if product.has_only_default_variant %}simple{% endif %}
-
     {% if product.available %}{% else %}sold{% endif %}
-    {% if product.compare_at_price > product.price %}sale{% else %}{% endif %}
-    {% for filter in sizes %}{% unless filter == blank %}filter-size-{{ filter | strip | handle | downcase | escape }} {% endunless %}{% endfor %}
-    {% for filter in colors %}{% unless filter == blank %}filter-color-{{ filter | strip | handle | downcase | escape }} {% endunless %}{% endfor %}"
+    {% if product.compare_at_price > product.price %}sale{% endif %}"
     data-price="{{ product.price }}"
     data-pos="{{ forloop.index }}"
     >
@@ -106,11 +103,7 @@
   <div class="row">
     <!-- Product Title -->
     <div class="main-information">
-      <div class="product-title">
-        <a href="{{ product.url }}">{{ product.title }}</a>
-      </div>
-      <div class="product-price"
-      >
+      <div class="product-price">
         {% if product.available %}
           {% if product.price_varies %}
             <span>{{ product.price_min | money }}</span> – <span>{{ product.price_max | money }}</span>
@@ -126,6 +119,11 @@
           <span>{{ product.price | money }}</span>
         {% endif %}
       </div>
+
+      <div class="product-title">
+        <a href="{{ product.url }}">{{ product.title }}</a>
+      </div>
+
       <form id="product-actions"
       action="/cart/add"
       method="post"
@@ -136,7 +134,6 @@
               class="product-variants"
             {%- endif -%}
             >
-
         {% if product.compare_at_price > product.price %}
           <div class="onsale">ON SALE</div>
         {% else %}
